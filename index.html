@@ -1,19 +1,47 @@
 <html>
 	<head>
 		<title>1nn0vadev</title>
+		
+		<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				//$('#wrapper-reversed').fadeOut({ duration: 0 });
+			});
+			setTimeout(toggle, 1000);
+			function toggle() {
+				$('#wrapper').fadeToggle({ duration: 10000 });
+				setTimeout(toggle, 60000);
+			}
+		</script>
 		<style type="text/css">
-			html, body { margin: auto; text-align: center; height: 100%; vertical-align: middle; }
-			.logo { display: block; margin: auto; vertical-align: middle; }
+			html, body { background-color: #FFFFFF; margin: auto; text-align: center; height: 100%; vertical-align: middle; }
+			#logo1 { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+			#logo2 { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 			.wrapper {
-				position: relative;
-				top: 50%;
-				transform: translateY(-50%);
+				position: fixed;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 1000;
+				background-color: #FFFFFF;
+			}
+			#wrapper-reversed {
+				background-color: #000000;
+				z-index: 0;
 			}
 		</style>
 	</head>
 	<body>
-		<div class="wrapper">
-			<img src="logo.png" class="logo" width="1104" height="550">
+		<div id="wrapper" class="wrapper">
+			<div id="logo1">
+				<img src="InnovaDev_logo_K.png" class="logo" width="717" height="359">
+			</div>
+		</div>
+		<div id="wrapper-reversed" class="wrapper">
+			<div id="logo2">
+				<img src="InnovaDev_logo_2clr_reversed.png" class="logo" width="717" height="359">
+			</div>
 		</div>
 	</body>
 </html>
