@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h1>bouncy</h1>
+
+        <canvas id="playground" style="background-color:red"></canvas>
+
+        <script>
+            let playground = document.getElementById("playground")
+            let pg2d = playground.getContext("2d")
+            let playgroundWidth = 1000 // window.innerWidth
+            let playgroundHeight = 500 // window.innerHeight
+
+            let dot1 = {
+                xPos: 0,
+                yPos: 0,
+                width: 10,
+                height: 10,
+                speedX: 5,
+                speedY: 5,
+                color: "#FFFFFF"
+            }
+
+            let dot2 = {
+                xPos: 0,
+                yPos: 0,
+                width: 20,
+                height: 20,
+                speedX: 20,
+                speedY: 20,
+                color: "#00FF00"
+            }
+
+            let paddle1 = {
+                xPos: 0,
+                yPos: 0,
+                width: 20,
+                height: 60,
+                color: "#00FF00"
+            }
+
+            let paddle2 = {
+                xPos: playgroundWidth - 20,
+                yPos: playgroundHeight / 2,
+                width: 20,
+                height: 60,
+                color: "#00FF00"
+            }
+
+            function setRandom(dot) {
+                dot.xPos = Math.floor((Math.random() * playgroundWidth))
+                dot.yPos = Math.floor((Math.random() * playgroundHeight))
+            }
+
+            function init() {
+                playground.width = playgroundWidth
+                playground.height = playgroundHeight
+
+                setRandom(dot1)
+                setRandom(dot2)
+
+                draw()
+            }
+
+            function drawRect(dot) {
+                // Fill the path
+                pg2d.fillStyle = dot.color;
+                pg2d.fillRect(dot.xPos, dot.yPos, dot.width, dot.height);
+                //playground.style.opacity = '0.2';
+            }
+
+            function draw() {
+                pg2d.clearRect(0, 0, playground.width, playground.height);
+
+                drawRect(dot1)
+                drawRect(dot2)
+                drawRect(paddle1)
+                drawRect(paddle2)
+
+                window.requestAnimationFrame(update)
+            }
+
+            function updateDot(dot) {
+                dot.xPos += dot.speedX
+                dot.yPos += dot.speedY
+
+                if (dot.xPos > playgroundWidth || dot.xPos < 0) {
+                    dot.speedX = -dot.speedX
+                }
+                if (dot.yPos > playgroundHeight || dot.yPos < 0) {
+                    dot.speedY = -dot.speedY
+                }
+            }
+
+            function update() {
+                updateDot(dot1)
+                updateDot(dot2)
+
+                draw()
+            }
+            init()
+        </script>
+    </body>
+</html>

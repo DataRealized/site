@@ -1,0 +1,337 @@
+<html>
+    <head>
+        <title> Prophet Pong </title>
+            <style>
+
+            </style>
+    </head>
+    <body>
+        <h1>Prophet Pong</h1>
+        <h5>by Derrick</h5>
+
+
+        <canvas id="playground" style="background-color:rgb(25, 79, 117)"></canvas>
+
+        <img id="image1" src="images/joe2.jpg" width="300" height="300" style="visibility: hidden; display:none;">
+        <img id="image2" src="images/joe2.jpg" width="300" height="300" style="visibility: hidden; display:none;">
+
+        <script>
+            let playground = document.getElementById("playground")
+            let pg2d = playground.getContext("2d")
+            let playgroundWidth = 2000 // window.innerWidth
+            let playgroundHeight = 1000 // window.innerHeight
+            let score1 = 0
+            let score2 = 0
+            let level = 1
+            let time = 0
+            let startTime = 0
+            let gameSpeedIncrement = 0.5
+            let maxMisses = 3
+            let gameInProgress = false
+            let highScore = 0
+
+            let dots = [
+                { name: '1', xPos: 0, yPos: 0, width: 90, height: 90, speedX: 10, speedY: 9, color: "#000000", score: 1, img: "" },
+                { name: '2', xPos: 0, yPos: 0, width: 90, height: 90, speedX: 10, speedY: 9, color: "#FFFFFF", score: 1, img: "image1" },
+                { name: '3', xPos: 0, yPos: 0, width: 90, height: 90, speedX: 10, speedY: 9, color: "#FFFFFF", score: 1, img: "image1" },
+                { name: '4', xPos: 0, yPos: 0, width: 90, height: 90, speedX: 10, speedY: 9, color: "#FFFFFF", score: 1, img: "image1" },
+                { name: '5', xPos: 0, yPos: 0, width: 90, height: 90, speedX: 10, speedY: 9, color: "#FFFFFF", score: 1, img: "image1" },
+                { name: '6', xPos: 0, yPos: 0, width: 90, height: 90, speedX: 10, speedY: 9, color: "#FFFFFF", score: 1, img: "image1" },
+                { name: '7', xPos: 0, yPos: 0, width: 90, height: 90, speedX: 10, speedY: 9, color: "#FFFFFF", score: 1, img: "image1" },
+                { name: '8', xPos: 0, yPos: 0, width: 90, height: 90, speedX: 10, speedY: 9, color: "#FFFFFF", score: 1, img: "image1" },
+                { name: '9', xPos: 0, yPos: 0, width: 90, height: 90, speedX: 10, speedY: 9, color: "#FFFFFF", score: 1, img: "image1" },
+                { name: '10', xPos: 0, yPos: 0, width: 90, height: 90, speedX: 10, speedY: 9, color: "#FFFFFF", score: 1, img: "image1" },
+                { name: '11', xPos: 0, yPos: 0, width: 90, height: 90, speedX: 10, speedY: 9, color: "#FFFFFF", score: 1, img: "image1" },
+                { name: '12', xPos: 0, yPos: 0, width: 90, height: 90, speedX: 10, speedY: 9, color: "#FFFFFF", score: 1, img: "image1" },
+                { name: '13', xPos: 0, yPos: 0, width: 90, height: 90, speedX: 10, speedY: 9, color: "#FFFFFF", score: 1, img: "image1" },
+                { name: '14', xPos: 0, yPos: 0, width: 90, height: 90, speedX: 10, speedY: 9, color: "#FFFFFF", score: 1, img: "image1" },
+                { name: '15', xPos: 0, yPos: 0, width: 90, height: 90, speedX: 10, speedY: 9, color: "#FFFFFF", score: 1, img: "image1" },
+                { name: '16', xPos: 0, yPos: 0, width: 90, height: 90, speedX: 10, speedY: 9, color: "#FFFFFF", score: 1, img: "image1" },
+                { name: '17', xPos: 0, yPos: 0, width: 90, height: 90, speedX: 10, speedY: 9, color: "#FFFFFF", score: 1, img: "image1" },
+                { name: '18', xPos: 0, yPos: 0, width: 90, height: 90, speedX: 10, speedY: 9, color: "#FFFFFF", score: 1, img: "image1" },
+                { name: '19', xPos: 0, yPos: 0, width: 90, height: 90, speedX: 10, speedY: 9, color: "#FFFFFF", score: 1, img: "image1" },
+                { name: '20', xPos: 0, yPos: 0, width: 90, height: 90, speedX: 10, speedY: 9, color: "#FFFFFF", score: 1, img: "image1" }
+            ]
+
+            let paddle1 = {
+                xPos: 20,
+                yPos: 0,
+                width: 20,
+                height: 300,
+                color: "#fffb00",
+                speed: 100,
+                misses: 0
+            }
+
+            let paddle2 = {
+                xPos: playgroundWidth - 40,
+                yPos: playgroundHeight / 2,
+                width: 20,
+                height: 300,
+                color: "#c3ff00",
+                speed: 100,
+                misses: 0
+            }
+
+            function setRandom(dot) {
+                dot.xPos = Math.floor((Math.random() * playgroundWidth / 2)) + (playgroundWidth / 4)
+                dot.yPos = Math.floor((Math.random() * playgroundHeight / 2)) + (playgroundHeight / 4)
+            }
+
+            function bindEvents() {
+                document.addEventListener("keydown", function(event) {
+                    if (event.key == 'a') {
+                        //console.log('a pressed')
+                        paddle1.yPos -= (paddle1.yPos > 0) ? paddle1.speed : 0
+                    }
+                    if (event.key == 'z') {
+                        //console.log('z pressed')
+                        paddle1.yPos += (paddle1.yPos < (playgroundHeight - paddle1.height)) ? paddle1.speed : 0
+                    }
+                    if (event.key == 'k') {
+                        //console.log('k pressed')
+                        paddle2.yPos -= (paddle2.yPos > 0) ? paddle2.speed : 0
+                    }
+                    if (event.key == 'm') {
+                        //console.log('m pressed')
+                        paddle2.yPos += (paddle2.yPos < (playgroundHeight - paddle2.height)) ? paddle2.speed : 0
+                    }
+                    if (event.key == 's') {
+                        console.log('s pressed')
+                        if (!gameInProgress) {
+                            startGame()
+                        }
+                    }
+                    if (event.key == 'p') {
+                        console.log('p pressed')
+                        if (!gameInProgress) {
+                            gameInProgress = true
+                            draw()
+                        } else {
+                            gameInProgress = false
+                        }
+                    }
+                })
+            }
+
+            function reInit() {
+                score1 = 0
+                score2 = 0
+                level = 1
+                time = 0
+                startTime = new Date().getTime()
+                gameInProgress = true
+
+                paddle1.misses = 0
+                paddle2.misses = 0
+
+                for (let i=0; i<dots.length; i++) {
+                    dots[i].speedX = dots[i].orgSpeedX
+                    dots[i].speedY = dots[i].orgSpeedY
+                    dots[i].bounced = false
+                }
+                draw()
+            }
+
+
+            function init() {
+                playground.width = playgroundWidth
+                playground.height = playgroundHeight
+
+                for (let i=0; i<dots.length; i++) {
+                    dots[i].orgSpeedX = dots[i].speedX
+                    dots[i].orgSpeedY = dots[i].speedY
+                    setRandom(dots[i])
+                }
+
+                startTime = new Date().getTime()
+
+                draw()
+
+                pg2d.fillText(`Press 'S' to Start`, (playgroundWidth / 2) - 50, (playground.height / 2) - 10);                 
+
+                bindEvents()
+            }
+
+            function drawRect(dot) {
+                // Fill the path
+                pg2d.fillStyle = dot.color;
+                pg2d.fillRect(dot.xPos, dot.yPos, dot.width, dot.height);
+                //playground.style.opacity = '0.2';
+            }
+
+            function drawImage(dot) {
+                let image = document.getElementById(dot.img)
+                pg2d.drawImage(image, dot.xPos, dot.yPos, dot.width, dot.height)
+            }
+
+            function drawScore() {
+                pg2d.font = "30px Arial";
+                pg2d.fillText(`Player 1: ${score1}`, 50, 50);                 
+                pg2d.fillText(`Player 2: ${score2}`, playground.width - 200, 50);                 
+            }
+
+            function drawLevel() {
+                pg2d.font = "30px Arial";
+                pg2d.fillText(`Level ${level}`, (playground.width / 2) + 10, playground.height - 50);                 
+            }
+
+            function drawHighScore() {
+                pg2d.font = "30px Arial";
+                pg2d.fillText(`High Score: ${highScore}`, (playground.width / 2) - 50, 50);                 
+            }
+            
+            function drawMisses() {
+                pg2d.font = "30px Arial";
+                let x1 = ""
+                for (let i=0; i<paddle1.misses; i++) {
+                    x1 += "X"
+                }
+
+                let x2 = ""
+                for (let i=0; i<paddle2.misses; i++) {
+                    x2 += "X"
+                }
+
+                pg2d.fillText(`${x1}`, 0, playground.height - 50);                 
+                pg2d.fillText(`${x2}`, playground.width - 80, playground.height - 50);                 
+            }
+
+            function draw() {
+                pg2d.clearRect(0, 0, playground.width, playground.height);
+
+                let dotCount = (level >= dots.length) ? dots.length : level
+                for (let i=0; i<dotCount; i++) {
+                    if (dots[i].img) {
+                        drawImage(dots[i])
+                    } else {
+                        drawRect(dots[i])
+                    }
+                }
+
+                drawRect(paddle1)
+                drawRect(paddle2)
+
+                drawScore()
+                drawLevel()
+                drawHighScore()
+                drawMisses()
+
+                if (paddle1.misses >= maxMisses || paddle2.misses >= maxMisses) {
+                    gameOver()
+                }
+                if (gameInProgress) {
+                    window.requestAnimationFrame(update)
+                }
+
+            }
+
+            function startGame() {
+                console.log(`start Game ${gameInProgress}`)
+                reInit()
+            }
+
+            function gameOver() {
+                gameInProgress = false
+                newHighScore = false
+
+                if (score1 == score2) {
+                    pg2d.fillText(`Tie Game!!!`, (playgroundWidth / 2) - 45, (playground.height / 2) - 100)            
+                }
+                else if (score1 > score2) {
+                    pg2d.fillText(`Player 1 Wins!!!`, (playgroundWidth / 2) - 65, (playground.height / 2) - 100)          
+                } else {
+                    pg2d.fillText(`Player 2 Wins!!!`, (playgroundWidth / 2) - 65, (playground.height / 2) - 100)           
+                }
+
+                if (score1 > highScore) { highScore = score1; newHighScore = true }
+                if (score2 > highScore) { highScore = score2; newHighScore = true }
+
+                pg2d.fillText(`GAME OVER`, (playgroundWidth / 2) - 50, (playground.height / 2) - 10);                 
+                pg2d.fillText(`Press 'S' to play again`, (playgroundWidth / 2) - 100, (playground.height / 2) + 50)              
+                if (newHighScore) {
+                    pg2d.fillText(`New HIGH SCORE!!!!`, (playgroundWidth / 2) - 95, (playground.height / 2) + 150)             
+                }
+            }
+
+            function updateDot(dot) {
+console.log(`updateDot ${dot.name}`)
+                dot.xPos += dot.speedX
+console.log(`dot.xPos: ${dot.xPos}`)
+                dot.yPos += dot.speedY
+console.log(`dot.yPos: ${dot.xPos}`)
+console.log(`bounced ${dot.bounced}`)
+console.log(`crossed line: ${dot.xPos < paddle1.width + paddle1.xPos}`)
+console.log(`hitting paddle: ${(dot.yPos + dot.height > paddle1.yPos && dot.yPos < (paddle1.yPos + paddle1.height))}`)
+                //Left edge calc
+                if (!dot.bounced && dot.xPos < paddle1.width + paddle1.xPos && (dot.yPos + dot.height > paddle1.yPos && dot.yPos < (paddle1.yPos + paddle1.height))) {
+                    console.log('bouncing...')
+                    dot.speedX = -dot.speedX
+                    console.log(`dot.speedX: ${dot.speedX}`)
+                    score1 += dot.score
+                    dot.bounced = true
+                } else if (dot.xPos < paddle1.width) {
+                    console.log('missing...')
+                    //console.log(score1)
+                    paddle1.misses += 1
+                    dot.bounced = false
+                    setRandom(dot)
+                } else {
+                    console.log('watching...')
+                    console.log(dot.xPos > paddle1.width + paddle1.xPos + 100)
+                    if (dot.xPos > paddle1.width + paddle1.xPos + 100) {
+                        console.log('setting dot eligible to bounce')
+                        dot.bounced = false
+                    }
+                }
+
+                //right edge calc
+                if (!dot.bounced && dot.xPos > (playgroundWidth - (playgroundWidth - paddle2.xPos) - dot.width) && (dot.yPos + dot.height > paddle2.yPos && dot.yPos < (paddle2.yPos + paddle2.height))) {
+                    dot.speedX = -dot.speedX
+                    score2 += dot.score
+                    dot.bounced = true
+                } else if (dot.xPos > (playgroundWidth - paddle2.width - dot.width)) {
+                    //console.log(score2)
+                    paddle2.misses += 1
+                    dot.bounced = false
+                    setRandom(dot)
+                } else {
+                    if (dot.xPos < (playgroundWidth - (playgroundWidth - paddle2.xPos) - dot.width) - 100) {
+                        dot.bounced = false
+                    }
+                }
+                if (dot.yPos > playgroundHeight - dot.height || dot.yPos < 0) {
+                    dot.speedY = -dot.speedY
+                }
+            }
+
+            function updateTime() {
+                time = parseInt((new Date().getTime() - startTime) / 1000) 
+            }
+            function updateLevel() {
+                let newLevel = parseInt(time / 10) 
+                if (newLevel > level) {
+                    let dotCount = (level >= dots.length) ? dots.length : level
+                    for (let i=0; i<dotCount; i++) {
+                        dots[i].speedX = (dots[i].speedX > 0) ? (dots[i].speedX) + (level * gameSpeedIncrement) : (dots[i].speedX) - (level * gameSpeedIncrement)
+                        dots[i].speedY = (dots[i].speedY > 0) ? (dots[i].speedY) + (level * gameSpeedIncrement) : (dots[i].speedY) - (level * gameSpeedIncrement) 
+                    }
+
+                    level = newLevel
+                } 
+            }
+
+            function update() {
+                let dotCount = (level >= dots.length) ? dots.length : level
+                for (let i=0; i<dotCount; i++) {
+                    updateDot(dots[i])
+                }
+                updateTime()
+                updateLevel()
+
+                draw()
+            }
+            init()
+        </script>
+    </body>
+</html>
