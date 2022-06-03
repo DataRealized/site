@@ -1379,11 +1379,10 @@ NGX.App.Events.once('page:ready',function(args){
 						}
 
 						if ($active.hasClass('disabletouch')) {
-							document.bind("touchstart", false)
-							document.bind("touchmove", false)
-
-							document.bind("touchend", false)
-							document.bind("touchcancel", false)
+							document.removeEventListener("touchstart", touchHandler, true);
+							document.removeEventListener("touchmove", touchHandler, true);
+							document.removeEventListener("touchend", touchHandler, true);
+							document.removeEventListener("touchcancel", touchHandler, true); 
 						}
 
             NGX.App.api.elementIntoView($('#xCampaignForm'));
