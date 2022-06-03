@@ -1425,25 +1425,25 @@ NGX.App.Events.once('form:ready',function(args){
   function touchHandler(e) {
 		var disableTouch = $(".cycle-slide-active").hasClass("disabletouch")
 		
-		if (!disableTouch) {
-			var touches = e.changedTouches;
-			var first = touches[0];
-			var type = "";
+		var touches = e.changedTouches;
+		var first = touches[0];
+		var type = "";
 
-			switch(e.type) {
-				case "touchstart":
-					type = "mousedown";
-					break;
-				case "touchmove":
-					type="mousemove";
-					break;        
-				case "touchend":
-					type="mouseup";
-					break;
-				default:
-					return;
-			}
+		switch(e.type) {
+			case "touchstart":
+				type = "mousedown";
+				break;
+			case "touchmove":
+				type="mousemove";
+				break;        
+			case "touchend":
+				type="mouseup";
+				break;
+			default:
+				return;
+		}
 				
+		if (!disableTouch && type != mousedown) {
 			var simulatedEvent = document.createEvent("MouseEvent");
 			simulatedEvent.initMouseEvent(type, true, true, window, 1, first.screenX, first.screenY, first.clientX, first.clientY, false, false, false, false, 0, null);
 
