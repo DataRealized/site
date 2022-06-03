@@ -1441,7 +1441,7 @@ NGX.App.Events.once('form:ready',function(args){
     e.preventDefault();
   }
 
-  function addTouchHandler() {
+  function init() {
     document.addEventListener("touchstart", touchHandler, true);
     document.addEventListener("touchmove", touchHandler, true);
     document.addEventListener("touchend", touchHandler, true);
@@ -1450,10 +1450,15 @@ NGX.App.Events.once('form:ready',function(args){
   }
 
 	function disableTouchHandler() {
-		document.
+		document.bind("touchstart", false)
+		document.bind("touchmove", false)
+
+		document.bind("touchend", false)
+		document.bind("touchcancel", false)
+
 	}
 
-  addTouchHandler();
+  init();
 })();
 /*globals NGX */
 //  @TODO: please comment - Chris
