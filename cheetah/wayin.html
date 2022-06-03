@@ -1379,7 +1379,11 @@ NGX.App.Events.once('page:ready',function(args){
 						}
 
 						if ($active.hasClass('disabletouch')) {
-							disableTouchHandler()
+							document.bind("touchstart", false)
+							document.bind("touchmove", false)
+
+							document.bind("touchend", false)
+							document.bind("touchcancel", false)
 						}
 
             NGX.App.api.elementIntoView($('#xCampaignForm'));
@@ -1452,15 +1456,6 @@ NGX.App.Events.once('form:ready',function(args){
     document.addEventListener("touchcancel", touchHandler, true); 
 	
   }
-
-	function disableTouchHandler() {
-		document.bind("touchstart", false)
-		document.bind("touchmove", false)
-
-		document.bind("touchend", false)
-		document.bind("touchcancel", false)
-
-	}
 
   init();
 })();
