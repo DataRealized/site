@@ -1,0 +1,1564 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en_US">
+<head>
+	<title>ShopTalk EMEA - Drag & Drop</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="https://s.wayin.com/c/img/brand/favicon.png" type="image/x-icon">
+	<meta name="robots" content="none">
+    
+
+<script>
+	var NGX = window.NGX || {
+		comps : []
+	};
+	var NGXD = window.NGXD || {};
+
+	// What version of NGX is this?
+	NGX.isVersion = function(version) {
+		var result = false;
+
+	  // Check we have received a string.
+	  if(!version || typeof version !== 'string') {
+	    throw new Error('Invalid argument type supplied to isVersion (expected:string, received:'+typeof version+').');
+	    return false;
+	  }
+
+	  // If we have a string, check its value.
+	  switch (version) {
+	    case '1':
+	      result = true;
+	      break;
+	  }
+	  return result;
+	};
+
+    NGX.info = {
+        id : '260577',
+        name : 'ShopTalk EMEA - Drag &amp; Drop',
+        title : 'ShopTalk EMEA - Drag &amp; Drop',
+        trackingReference: '',
+        externalReference: '20220511145805_pack_for_paradise_1',
+        container: 'ngxFrameacc0cc3d-0b82-42dd-81b0-8c8739c48cb9',
+    };
+
+	NGX.state = {
+        useApi : false,
+	    framed : (window.top !== window.self),
+		currentUser : {
+			fbid : '',
+			invitedFriends : [],
+            remembered : false
+		},
+        callbackQueue : {}
+	};
+
+	NGX.config = {
+		displayFormURL		: 'https://xd.wayin.com',
+		displayFormURLsecure: 'https://xd.wayin.com',
+
+		helios2URLSecure: 'https://eu-api.wayin.com',
+
+		displayVoteURL    		: 'https://eu-api.wayin.com',
+		displayVoteURLsecure 	: 'https://eu-api.wayin.com',
+
+		displayContServiceV2URL 		: 'https://dc.wayin.com',
+		displayContServiceV2URLsecure 	: 'https://dc.wayin.com',
+		countsURL       : 'https://metric.wayin.com',
+		countsURLsecure : 'https://metric.wayin.com',
+		metricURL    		: 'https://eu-api.wayin.com',
+		metricURLsecure 	: 'https://eu-api.wayin.com',
+		apiFormURL          : 'http://xd.wayin.com',
+		apiFormURLsecure    : 'https://xd.wayin.com',
+		displayURL			: 'https://xd.wayin.com',
+		ugcAssetPath 		: 'https://a.wayin.com/ugc',
+		insightUrl			: 'https://track.wayin.com',
+		contentServiceVersion: 'v2',
+		promotion		: {
+			id		: '0'
+		},
+		testID              : "",
+		externalCustomerID  : "", // A user-defined customer id that can be passed in to experiences, for loyalty tracking, etc.
+		externalCustomerIDType  : "" // Type flag for customer id to indicate if it is user-defined or md5 hash of email for CD Web Tags.
+
+	,
+		id	   : '260577',
+		type   : 'type.campaignobject.quiz',
+		appVersion : '102',
+		interactionStrategy : 'interaction.partition',
+		subtype   : 'type.campaignobject.quiz.category',
+		isInNetwork: false,
+        tenant : '7449',
+		claimContent : 'false',
+		hasSecondaryForm : false,
+		singlePageCampaign : false,
+		usesHelios : true,
+        timezoneOffset   : '-6',
+		
+		votingStrategy		: 'strategy.voting.none',
+		votingPermsRequired : false,
+		votingFraudDetectionStrategy : 'strategy.fraud.none',
+		grecaptchaSiteKey : '6LcdaRgTAAAAAJiYpq81C4eeM261U9kOG6MoyuKr',
+		viralIncentiveStrategy : '',
+		viralIncentiveConversionMsg : '',
+
+		
+
+        permissionRequest : {
+            timing		: 'submit',
+            scope		: ''
+        },
+		invites : {
+            enabled			: 'false',
+		    maxInvites		: 50,
+			updateURL		: 'https://xd.wayin.com/display/form/updateInvites',
+			getInvitedURL 	: 'https://xd.wayin.com/display/form/invitedFriends.json',
+			postToFriend	: false
+		},
+		autoInviteMode  : 'none',
+		conversionErrorText : '',
+		shareOnInit		: false,
+		shareOnInitMode : '',
+		sharing : {
+            name            : 'ShopTalk EMEA - Drag &amp; Drop',
+            picture         : '',
+            caption         : '',
+            description     : 'Quiz Campaign',
+ 			inviteText      : '',
+            actionText      : '',
+            actionLink      : 'https://ngx.me/4KnLt0N',
+            link            : 'https://ngx.me/4KnLt0N',
+            customLink 		: 'http://',
+            trackURL        : 'https://xd.wayin.com/display/entrydata/updateShares.json?e=s&cID=260577&s=0&p=0&apikey=c157087e-c311-42df-ac27-ef54d67faeb4&h=0&medium=direct&source=web&channel=website&a=fbwall',
+            updateURL		: 'https://eu-api.wayin.com/api/interact/d/share',
+						modulesHaveFBSDKDependency: false
+        }
+ 		,sharingConfig : {"facebookConfirmation":{"data":[{"link":"ctx:smarturl","asset":"","title":"","message":"","byline":"","picture":""}],"context":"confirmation","action":"share","viewTpl":"facebookShareTpl","title":"Facebook confirmation share prompt","byline":"Configure the sharing dialog fans will see when they arrive on the confirmation page of your experience","enabled":"false","network":"facebook"},"default":{"isDefault":true,"data":[{"link":"http://","asset":"","title":"","message":"","byline":"","picture":"","allowImport":true}],"context":"campaign","action":"share","viewTpl":"defaultShareTpl","title":"Default share prompt","byline":"Configure the default sharing options fans will see when they share content from your experience","enabled":"true","network":"default"},"pinterestShare":{"data":[{"link":"http://","asset":"","title":"","message":"","byline":"","picture":""}],"context":"campaign","action":"share","viewTpl":"pinterestShareTpl","title":"Pinterest share prompt","byline":"Configure the Pinterest message fans will see when they click a Pin It button","enabled":"false","network":"pinterest"},"twitterShare":{"data":[{"link":"ctx:smarturl","asset":"","title":"","message":"","byline":"","picture":""}],"context":"campaign","action":"share","viewTpl":"twitterShareTpl","title":"Twitter share prompt","byline":"Configure the Twitter message fans will see when they click a tweet button.","enabled":"false","network":"twitter"},"facebookShare":{"data":[{"link":"ctx:smarturl","asset":"","title":"Win a Santa Sack full of designer goodies","message":"I'm in the draw to win a Santa sack full of designer goodies by picking some of my favourite products from Indexed. Click on the link below to pick yours and be in to win. ","byline":"Indexed","picture":"bundle:image:400x510:/bundles/4665/2RF6nrB/image/c/Santa-Sack--backgrounf.png","allowImport":true}],"context":"campaign","action":"share","viewTpl":"facebookShareTpl","title":"Facebook share prompt","byline":"Configure the sharing dialog fans will see when they click a Facebook share button","enabled":"false","network":"facebook"}}
+		, socialAuthConfig : {"strategy":"strategy.socialauth.disabled"}
+		
+
+        
+            ,useNewUGCWalls: true
+        
+	};
+
+	NGX.context = {
+		basePath		: '/display/container/dc/0f91a980-aec3-4bc1-ac4f-335b1e82f639/',
+		displayUrl		: 'https://xd.wayin.com',
+		assetUrl		: 'https://a.wayin.com',
+		staticUrl		: 'https://s.wayin.com',
+        ugcAssetPath 	: 'https://a.wayin.com/ugc',
+		oauthServerURL  : '',
+		apikey			: 'c157087e-c311-42df-ac27-ef54d67faeb4',
+		guid			: '',
+		uid			    : '',
+		smarturl		: 'https://ngx.me/4KnLt0N',
+		isFB			: false,
+		isFBTab			: false,
+		vk : {
+			appId : ''
+		},
+		fb				: {
+            apiVersion  : 'v11.0',
+            fanPage     : {
+                tabLink : ""
+            },
+            page			: {
+				id		: '',
+				name	: 'ShopTalk EMEA - Drag &amp; Drop'
+			},
+			app				: {
+				id      : '132744330118817',
+				name	: ''
+			}
+		},
+		twitter         : {
+		    loaded      : false
+		},
+		locale: 'en_US',
+		
+
+        appData         : '',
+        captcha         : {
+            enabled     : false
+        },
+        track           : {
+            source      : 'web',
+            medium      : 'direct',
+            channel     : 'website'
+        }
+
+		
+
+		
+			,displayContainer : {
+				id : '215101',
+				guid : '0f91a980-aec3-4bc1-ac4f-335b1e82f639',
+				smartURL : 'https://ngx.me/4KnLt0N',
+                responsive : true
+			},
+            channel : {
+                id : '31989'
+            }
+		
+
+		
+			,displayObject	: {
+				id		: 713877,
+				sharing	: {
+					name 			: '',
+					picture 		: '',
+					caption 		: '',
+					description 	: '',
+					link 			: "http://",
+					noAction		: true
+			    }
+			}
+		
+		
+	};
+
+	
+        
+    
+
+
+</script>
+
+
+
+	
+
+
+<meta property="fb:app_id" content="132744330118817">
+<meta property="og:title" content="ShopTalk EMEA - Drag & Drop">
+<meta property="og:type" content="website">
+
+<meta property="og:site_name" content="Cheetah Digital">
+
+
+
+
+	
+
+
+	
+	
+
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="//s.wayin.com/assets/display/polyfill/polyfills-353baa1bb909b2d499ee1207942a3960.js" ></script>
+    <![endif]-->
+	
+
+
+
+<script>
+	var flowJSON = {"name":"StandardQuizCampaignFlow","flowRef":"flow.quiz.standard","states":[{"name":"entry","title":"label:lbl.page.entry","scope":"phase","route":"entry","menu":true,"menuGroup":"main","visible":true,"defaultState":true,"style":"inline","transition":null,"init":null,"action":"display:page:entry","dependsOn":null}],"events":{},"actions":{"enter":{"action":"exec:campaignEntry","scope":"global","phase":null,"env":"client","routeRef":null,"payloadType":"standard","data":{}},"share":{"action":"exec:facebookShare","scope":"global","phase":null,"env":"client","routeRef":null,"payloadType":"standard","data":{}},"invite":{"action":"exec:facebookInvite","scope":"global","phase":null,"env":"client","routeRef":null,"payloadType":"standard","data":{}}},"routes":{"start":{"states":["state:entry"],"state":"state:entry"}}}
+</script>
+
+	
+
+
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="https://s.wayin.com/themes/base2/css/base.min.gz.css?u=1653585623000" id="styles-base">
+
+				<!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="https://s.wayin.com/themes/base2/css/ie8.min.gz.css?u=1653585623000" id="styles-legacy-base"><![endif]-->
+<link rel="stylesheet" type="text/css" href="https://s.wayin.com/themes/scaffold2/css/theme.min.gz.css?u=1653585623000" id="styles-foundation">
+
+			<!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="https://s.wayin.com/themes/scaffold2/css/ie8.min.gz.css?u=1653585623000" id="styles-legacy-foundation"><![endif]-->
+<link rel="stylesheet" type="text/css" href="https://a.wayin.com/themes/7449/195227/theme.min.gz.css?u=1653595313000" id="styles-overrides">
+<style id="styles-custom">.xFieldRadioChoice, .xFieldCheckboxChoice {     margin-bottom: 7px;     width: 24%;     display: inline-block; }  .xFormPage.last .xFieldCheckboxChoice {     margin-bottom: 7px;     width: 100%;     display: inline-block; }  .xAnswerContainer .xFieldRadioChoice {     vertical-align: top; }  .xCustom-drop img.featureImage{ 	width: auto; }  .xControlQuestion .xTypeImage img {     margin: 0;     width: 100px; }  .xFieldContainer.xFieldWidthMedium, .xControlChallengequestion.xFieldWidthMedium {     padding-right: 0; }   .xFormPage.last {     background-color: white !important;     border-top: 5px solid #F4E3D4;     border-bottom: 0; } .xFormPage.last #infoWrapper {      margin-top: 2rem; }  .xFormPage.last .xFieldItem  {   max-width:1200px;   margin:0 auto;   padding:0 20px!important; } .xFormPages {     margin-bottom: 0; }  #terms_and_conditionsWrapper .xFieldCheckboxChoice {  width: 100%;  }  .xActionsForm .xActivateContainer {     margin-top: -6px;   padding: 20px;     background: #fff;     border-bottom: 5px solid #D1D1D1; }  .xActionsForm .xActivateContainer .xSubmit {   background: #02aef1;     padding: 5px 20px;     color: #fff;     font-weight: bold; }   .xCustom-drop .xMediaImage, #xSectionDetailsR3, .xCustom-bag .xMediaContainer {   	background-size: 100%;     background-repeat: repeat; } .xCustom-drop .xMediaImage.closed:before{   background-image: none; }  .xCustom-drop .xMediaImage.closed img {   opacity:1;   height:auto;   width:auto; }   div#xSectionEntryR1 .xRowInner {     background-color: #fff; } #xSectionConfirmation_xCampaignConfirmation .xBodyContainer {     background: #fbcebf; }  .xCustom-drop .xMediaImage, .xPageFooter .xContainerImage{       border-bottom: 8px solid #f1545a; } .xAnswerContainer .xFieldRadioChoice.ui-draggable-dragging, .xAnswerContainer .xFieldRadioChoice.selected, .xAnswerContainer .xFieldRadioChoice.current{   border-color: #f1545a; }  .xComponent {   background-color: transparent !important; } div#xSectionEntryR1 .xRowInner {   background-color: transparent; } body {   background-size: cover; } .xFormPage {   background-color: white !important;   border-top: 5px solid #F4E3D4;   border-bottom: 5px solid #F4E3D4; } .xCustom-drop .xMediaImage, .xPageFooter .xContainerImage {   border-bottom: 0px; } .xCustom-heading {   text-align: center;   color: #293A4D; } .xCustom-heading h1 {   font-weight: bold;   font-size: 5rem;   line-height: 5rem;   margin-bottom: 0px; } .xCustom-heading h2 {   color: #293A4D;   font-size: 3rem;   margin-bottom: 10px; } .xCustom-heading p {   font-size: 1.5rem !important;   font-weight: bold; } .xCustom-heading img {   max-width: 500px; }  .xActionsForm .xActivateContainer .xSubmit {     background: #E76C69;     padding: 5px 20px;     color: #fff;     font-weight: bold; } .xQuestionLabel {   text-align: center;   margin-top: 2rem;   font-weight: bold;   color: #293A4D; } .xAnswerContainer .xFieldRadioChoice, .xAnswerContainer .xFieldCheckboxChoice {   text-align: center;   margin: auto; } .xAnswerContainer .xFieldRadioChoice .xMediaContainer, .xAnswerContainer .xFieldCheckboxChoice .xMediaContainer {   height: 200px;   text-align: center;   margin: auto;   vertical-align: middle;   display: flex; } .xAnswerContainer .xFieldRadioChoice .xMediaContainer img, .xAnswerContainer .xFieldCheckboxChoice .xMediaContainer img {   margin: auto;   width: auto; } .xAnswerContainer .xFieldRadioChoice .xRadiobox, .xAnswerContainer .xFieldCheckboxChoice .xRadiobox {   display: none; } .xAnswerContainer .xFieldRadioChoice .xFormLabel, .xAnswerContainer .xFieldCheckboxChoice .xFormLabel {   width: 100%;   text-align: center;   max-width: 100%;   padding-left: 0;   color: #293A4D;   font-weight: bold;   margin-bottom: 50px; } .xAnswerContainer .xFieldRadioChoice .xFormLabel div, .xAnswerContainer .xFieldCheckboxChoice .xFormLabel div {   font-size: 1rem; } .xAnswerContainer .xFieldRadioChoice .xFormLabel:before, .xAnswerContainer .xFieldCheckboxChoice .xFormLabel:before {   content: "";   width: 20px;   border-top: 2px solid #D1D1D1;   display: block;   text-align: center;   margin: auto;   padding-bottom: 10px; } .info.xCopy {   text-align: center;   padding-top: 10px;   font-weight: bold; } .xPaginationContainer {   display: none; } .xCustom-drop .ui-droppable {   max-width: 500px;   margin: auto; } .xCustom-drop .ui-droppable.dropping {   opacity: .6; } .xCustom-drop .ui-droppable img {   width: 30%; } .xCustom-drop[data-number-items="1"] .ui-droppable img {   width: 50% !important; } .xCustom-drop[data-number-items="2"] .ui-droppable img {   width: 60% !important; } .xCustom-drop[data-number-items="3"] .ui-droppable img {   width: 70% !important; } .xCustom-drop[data-number-items="4"] .ui-droppable img {   width: 100% !important; } .xCustomModule-confirmationthanks {   color: #293A4D;   text-align: center;   border-top: 5px solid #D1D1D1;   border-bottom: 5px solid #D1D1D1;   max-width: 1300px;   margin: auto; } .xCustomModule-confirmationthanks .xBodyContainer {   position: relative; }  @media (min-width: 520px) {   .xCustomModule-confirmationthanks .xCopyContainer {     padding: 10% !important;     padding-left: 0 !important;   }   .xCustomModule-confirmationthanks .xCopyContainer:before {     position: relative;     display: inline;     float: left;   }   .xCustomModule-confirmationthanks .xCopyContainer:after {     display: inline;     float: right;   } } @media screen and (max-width: 520px) {   .xAnswerContainer .xFieldRadioChoice {     display: block;     width: 100%;     display: table;   }   .xAnswerContainer .xFieldRadioChoice .xMediaContainer {     width: 50%;     display: table-cell;     padding-bottom: 5px;     text-align: center;     height: auto;   }   .xAnswerContainer .xFieldRadioChoice .xMediaContainer img {     max-height: 100px;   }   .xAnswerContainer .xFieldRadioChoice .xFieldLabel {     display: table-cell;   } }</style>
+  <!-- No integrations required -->
+</head>
+<body id="xCampaign260577" class="xModula notEntered xEmbedResponsive xFormatWidget xChannelWeb has1Page noParticipantWall noIncentiveData xCampaignPage xBody xCampaignQuiz noSponsor noBGImage noFeatureImage noMainImage noCountdown hasForm noWizard " data-ngx-tracking="">
+  
+	
+				   
+				
+
+	
+				   
+				
+
+    
+
+	<div class="xPage">
+		
+		
+		
+			<div class="xPageInner">
+                
+
+
+
+	<header id="xSectionHeader" class="xPageHeader xSection xSectionStatic" role="banner">
+		
+	<div class='xRow xRow-1col_full n1 odd first' id='HeaderR1'>
+  <div class='xRowInner'>
+		
+			<div class='xCell n1 first last full' id='HeaderR1C1'>
+  <div class='xCellInner'>
+				
+					
+					<div id='Header_xModule_Header' data-ngx-id='xModule_Header' data-componentType='campaignheader' style='' class='xComponent xCampaignHeader n1 xFullColModule hasFeatImage xTmpl-TitlesBannerNav'>
+  <div class='xComponentInner'>
+
+
+
+<div class='xPageBanner'><img width="1200" height="300"  src="https://a.wayin.com/images/7449/76e3ce9a-09eb-49e0-b992-70b411ecccd6/Header-Animation.gif" alt="" aria-role="presentation"></div>
+
+
+
+
+
+</div>
+</div>
+					
+				 
+			</div>
+</div>
+		 
+	</div>
+</div>
+
+
+	</header>
+
+
+                
+                    <main role="main" class="xPageMain">
+                        
+                            
+                                
+                                    
+                                    <section id='xSectionEntry' class='xSection xSectionEntry xSectionContent' data-stateName='entry' data-ngx-id='713861'>
+  <div class='xSectionInner'>
+                                        
+	<div class='xRow xRow-1col_full n1 odd first' id='xSectionEntryR1'>
+  <div class='xRowInner'>
+		
+			<div class='xCell n1 first last full xModuleMixed xCustomCell-heading xCustomCell-drop' id='xSectionEntryR1C1'>
+  <div class='xCellInner'>
+				
+					
+					<div id='xSectionEntry_callout_1545351652331' data-ngx-id='callout_1545351652331' data-componentType='callout' style='' class='xComponent xCallout n1 xFullColModule xCustom-heading xCustomModule-heading xStyle-std hasTitle xTmpl-Item'>
+  <div class='xComponentInner'><!-- _callout with callout, item, postcard and left -->
+
+<div class='xItem xContentText xPostcard xClassCallout xNetworkUgc xDisplayShow xVariantLeft hasCopy'>
+  <div class='xItemInner'>
+	
+		<div class="xBodyContainer">
+			<div class='xCopyContainer xMain xHoverHide'>
+  <h2 class='xTitle xByline'>Simply drag and drop one item per question into your basket and try your luck at our super cool claw machine</h2>
+</div>
+
+			
+
+			
+
+			
+
+			
+				
+			
+
+			
+	
+
+
+		</div>
+	
+	
+
+
+
+
+</div>
+</div>
+
+
+
+</div>
+</div>
+					
+				
+					
+					<div id='xSectionEntry_xModule_Entry' data-ngx-id='xModule_Entry' data-componentType='form' style='' class='xComponent xForm n2 xFullColModule xCustom-drop xCustomModule-drop xStyle-std hasFeatImage xTmpl-Left'>
+  <div class='xComponentInner'>
+
+
+
+<div class='xMediaContainer xMediaImage'><img width="512" height="512" class="featureImage" src="https://a.wayin.com/images/7449/32b36bec-7c4f-43e2-a884-7a26072a66f0/Basket_-_Solid.png" alt=" " ></div>
+
+
+
+
+    
+
+
+<div class='xQuizFormContainer'><form enctype='multipart/form-data' method='post' action='https://eu-api.wayin.com/api/interact/d/record' id='xCampaignForm' style='' role='form' data-ngx-method='ajax' data-quizType='categorymatch' class='xDefaultForm  xQuizFormCategorymatch'>
+  <div class='xFormPages'>
+<input type="hidden" name="apikey" value="c157087e-c311-42df-ac27-ef54d67faeb4" id="apikey" />
+<input type="hidden" name="containerId" value="0f91a980-aec3-4bc1-ac4f-335b1e82f639" id="containerId" />
+<input type="hidden" name="formId" value="334679" id="formId" />
+<input type="hidden" name="campaignId" value="260577" id="campaignId" />
+<input type="hidden" name="container_guid" value="76e3ce9a-09eb-49e0-b992-70b411ecccd6" id="container_guid" />
+<input type="hidden" name="mode" value="" id="mode" />
+
+
+
+<input type="hidden" name="promotionId" value="" id="promotionId" />
+
+
+<input type="hidden" name="ngxInvitedFriends" value="" id="ngxInvitedFriends" />
+
+
+	<input type="hidden" name="channelId" value="31989" id="channelId" />
+
+	<input type="hidden" name="medium" value="direct" id="medium" />
+
+	<input type="hidden" name="source" value="web" id="source" />
+
+	<input type="hidden" name="channel" value="website" id="channel" />
+
+	<input type="hidden" name="content" value="" id="content" />
+
+	<input type="hidden" name="activity" value="" id="activity" />
+
+	<input type="hidden" name="r" value="" id="r" />
+
+
+
+
+
+
+
+
+
+<input type="hidden" name="ngx_t_token" value="MRw6yT2Bjqr0vjBSRHKoBT8SUwG//HOV0u961BSPAOM=" id="ngx_t_token" /><div class="xFormPage first odd n1 ">
+	<fieldset>
+
+		
+			
+			
+
+	
+
+
+			
+
+
+		
+
+		
+			<div id='What_is_the_biggest_marketing_challenge_you_are_trying_to_solve_Wrapper' data-ngx-id='What_is_the_biggest_marketing_challenge_you_are_trying_to_solve_' data-ngx-control-required-msg='Select an option.' data-parsley-error-container='#What_is_the_biggest_marketing_challenge_you_are_trying_to_solve_Wrapper .xErrorLabel' data-ngx-control-error-msg='Field not valid, please check.' class='xFieldItem xControlQuizcategory hasImages xRequired'><div class='xFieldItem xControlQuestion xAnswerSingle xQuestionMediacard'><div class="xFieldContainer">
+
+	<div class="xCopyContainer xQuizQuestion" data-type="single">
+		<p class="xTitle xQuestionLabel">What is the biggest marketing challenge you are trying to solve? </p>
+	</div>
+
+	
+
+	<div class="xAnswerContainer">
+		<div class='xField xFieldRadioChoice hasImage'>
+  <div class='xMediaContainer xTypeImage'><img width="145" height="145"  src="https://a.wayin.com/images/7449/76e3ce9a-09eb-49e0-b992-70b411ecccd6/Q1_-_A__3.png" alt="" ></div>
+  <input type='radio' title='What is the biggest marketing challenge you are trying to solve? ' class='radioField' name='What_is_the_biggest_marketing_challenge_you_are_trying_to_solve_' id='What_is_the_biggest_marketing_challenge_you_are_trying_to_solve__0' value='Acquiring new consumers and/or identifying unknown consumers' autocomplete='off' required='' data-parsley-trigger='change focusout' data-parsley-validation-minlength='0' data-parsley-error-container='#What_is_the_biggest_marketing_challenge_you_are_trying_to_solve_Wrapper .xErrorLabel' data-parsley-required='true' data-parsley-required-message='Select an option.' data-parsley-type-text-message='Field not valid, please check.' />
+  <label class='xFormLabel xFieldLabel' for='What_is_the_biggest_marketing_challenge_you_are_trying_to_solve__0'>Acquire new audiences</label>
+</div>
+<div class='xField xFieldRadioChoice hasImage'>
+  <div class='xMediaContainer xTypeImage'><img width="145" height="145"  src="https://a.wayin.com/images/7449/76e3ce9a-09eb-49e0-b992-70b411ecccd6/Q1_-_B__3.png" alt="" ></div>
+  <input type='radio' title='What is the biggest marketing challenge you are trying to solve? ' class='radioField' name='What_is_the_biggest_marketing_challenge_you_are_trying_to_solve_' id='What_is_the_biggest_marketing_challenge_you_are_trying_to_solve__1' value='Understanding and retaining existing consumers' autocomplete='off' required='' data-parsley-trigger='change focusout' data-parsley-validation-minlength='0' data-parsley-error-container='#What_is_the_biggest_marketing_challenge_you_are_trying_to_solve_Wrapper .xErrorLabel' data-parsley-required='true' data-parsley-required-message='Select an option.' data-parsley-type-text-message='Field not valid, please check.' />
+  <label class='xFormLabel xFieldLabel' for='What_is_the_biggest_marketing_challenge_you_are_trying_to_solve__1'>Understand and enrich your data</label>
+</div>
+<div class='xField xFieldRadioChoice hasImage'>
+  <div class='xMediaContainer xTypeImage'><img width="145" height="145"  src="https://a.wayin.com/images/7449/76e3ce9a-09eb-49e0-b992-70b411ecccd6/Q1_-_C__3.png" alt="" ></div>
+  <input type='radio' title='What is the biggest marketing challenge you are trying to solve? ' class='radioField' name='What_is_the_biggest_marketing_challenge_you_are_trying_to_solve_' id='What_is_the_biggest_marketing_challenge_you_are_trying_to_solve__2' value='Personalizing omnichannel communications' autocomplete='off' required='' data-parsley-trigger='change focusout' data-parsley-validation-minlength='0' data-parsley-error-container='#What_is_the_biggest_marketing_challenge_you_are_trying_to_solve_Wrapper .xErrorLabel' data-parsley-required='true' data-parsley-required-message='Select an option.' data-parsley-type-text-message='Field not valid, please check.' />
+  <label class='xFormLabel xFieldLabel' for='What_is_the_biggest_marketing_challenge_you_are_trying_to_solve__2'>Engage and personalise</label>
+</div>
+<div class='xField xFieldRadioChoice hasImage'>
+  <div class='xMediaContainer xTypeImage'><img width="145" height="145"  src="https://a.wayin.com/images/7449/76e3ce9a-09eb-49e0-b992-70b411ecccd6/Q1_-_D__3.png" alt="" ></div>
+  <input type='radio' title='What is the biggest marketing challenge you are trying to solve? ' class='radioField' name='What_is_the_biggest_marketing_challenge_you_are_trying_to_solve_' id='What_is_the_biggest_marketing_challenge_you_are_trying_to_solve__3' value='Driving advocacy and emotional loyalty' autocomplete='off' required='' data-parsley-trigger='change focusout' data-parsley-validation-minlength='0' data-parsley-error-container='#What_is_the_biggest_marketing_challenge_you_are_trying_to_solve_Wrapper .xErrorLabel' data-parsley-required='true' data-parsley-required-message='Select an option.' data-parsley-type-text-message='Field not valid, please check.' />
+  <label class='xFormLabel xFieldLabel' for='What_is_the_biggest_marketing_challenge_you_are_trying_to_solve__3'>Retain and build loyalty</label>
+</div>
+	</div>
+
+</div>
+</div>
+  <div class='xHelpContainer'><div role='alert' class='xErrorLabel'></div></div>
+</div>
+			<!-- EOF: Page Control Loop //-->
+
+	</fieldset>
+</div><div class="xFormPage even n2 ">
+	<fieldset>
+
+		
+
+		
+			<div id='What_is_the_secondary_marketing_challenge_you_are_trying_to_solve_Wrapper' data-ngx-id='What_is_the_secondary_marketing_challenge_you_are_trying_to_solve_' data-ngx-control-required-msg='Select an option.' data-parsley-error-container='#What_is_the_secondary_marketing_challenge_you_are_trying_to_solve_Wrapper .xErrorLabel' data-ngx-control-error-msg='Field not valid, please check.' class='xFieldItem xControlQuizcategory hasImages xRequired'><div class='xFieldItem xControlQuestion xAnswerSingle xQuestionMediacard'><div class="xFieldContainer">
+
+	<div class="xCopyContainer xQuizQuestion" data-type="single">
+		<p class="xTitle xQuestionLabel">What is the secondary marketing challenge you are trying to solve? </p>
+	</div>
+
+	
+
+	<div class="xAnswerContainer">
+		<div class='xField xFieldRadioChoice hasImage'>
+  <div class='xMediaContainer xTypeImage'><img width="145" height="145"  src="https://a.wayin.com/images/7449/76e3ce9a-09eb-49e0-b992-70b411ecccd6/Q1_-_A__3.png" alt="" ></div>
+  <input type='radio' title='What is the secondary marketing challenge you are trying to solve? ' class='radioField' name='What_is_the_secondary_marketing_challenge_you_are_trying_to_solve_' id='What_is_the_secondary_marketing_challenge_you_are_trying_to_solve__0' value='Acquiring new consumers and/or identifying unknown consumers' autocomplete='off' required='' data-parsley-trigger='change focusout' data-parsley-validation-minlength='0' data-parsley-error-container='#What_is_the_secondary_marketing_challenge_you_are_trying_to_solve_Wrapper .xErrorLabel' data-parsley-required='true' data-parsley-required-message='Select an option.' data-parsley-type-text-message='Field not valid, please check.' />
+  <label class='xFormLabel xFieldLabel' for='What_is_the_secondary_marketing_challenge_you_are_trying_to_solve__0'>AcquirinAcquire new audiencesg new consumers and/or identifying unknown consumers</label>
+</div>
+<div class='xField xFieldRadioChoice hasImage'>
+  <div class='xMediaContainer xTypeImage'><img width="145" height="145"  src="https://a.wayin.com/images/7449/76e3ce9a-09eb-49e0-b992-70b411ecccd6/Q1_-_B__3.png" alt="" ></div>
+  <input type='radio' title='What is the secondary marketing challenge you are trying to solve? ' class='radioField' name='What_is_the_secondary_marketing_challenge_you_are_trying_to_solve_' id='What_is_the_secondary_marketing_challenge_you_are_trying_to_solve__1' value='Understanding and retaining existing consumers' autocomplete='off' required='' data-parsley-trigger='change focusout' data-parsley-validation-minlength='0' data-parsley-error-container='#What_is_the_secondary_marketing_challenge_you_are_trying_to_solve_Wrapper .xErrorLabel' data-parsley-required='true' data-parsley-required-message='Select an option.' data-parsley-type-text-message='Field not valid, please check.' />
+  <label class='xFormLabel xFieldLabel' for='What_is_the_secondary_marketing_challenge_you_are_trying_to_solve__1'>Understand and enrich your data</label>
+</div>
+<div class='xField xFieldRadioChoice hasImage'>
+  <div class='xMediaContainer xTypeImage'><img width="145" height="145"  src="https://a.wayin.com/images/7449/76e3ce9a-09eb-49e0-b992-70b411ecccd6/Q1_-_C__3.png" alt="" ></div>
+  <input type='radio' title='What is the secondary marketing challenge you are trying to solve? ' class='radioField' name='What_is_the_secondary_marketing_challenge_you_are_trying_to_solve_' id='What_is_the_secondary_marketing_challenge_you_are_trying_to_solve__2' value='Personalizing omnichannel communications' autocomplete='off' required='' data-parsley-trigger='change focusout' data-parsley-validation-minlength='0' data-parsley-error-container='#What_is_the_secondary_marketing_challenge_you_are_trying_to_solve_Wrapper .xErrorLabel' data-parsley-required='true' data-parsley-required-message='Select an option.' data-parsley-type-text-message='Field not valid, please check.' />
+  <label class='xFormLabel xFieldLabel' for='What_is_the_secondary_marketing_challenge_you_are_trying_to_solve__2'>Engage and personalise</label>
+</div>
+<div class='xField xFieldRadioChoice hasImage'>
+  <div class='xMediaContainer xTypeImage'><img width="145" height="145"  src="https://a.wayin.com/images/7449/76e3ce9a-09eb-49e0-b992-70b411ecccd6/Q1_-_D__3.png" alt="" ></div>
+  <input type='radio' title='What is the secondary marketing challenge you are trying to solve? ' class='radioField' name='What_is_the_secondary_marketing_challenge_you_are_trying_to_solve_' id='What_is_the_secondary_marketing_challenge_you_are_trying_to_solve__3' value='Driving advocacy and emotional loyalty' autocomplete='off' required='' data-parsley-trigger='change focusout' data-parsley-validation-minlength='0' data-parsley-error-container='#What_is_the_secondary_marketing_challenge_you_are_trying_to_solve_Wrapper .xErrorLabel' data-parsley-required='true' data-parsley-required-message='Select an option.' data-parsley-type-text-message='Field not valid, please check.' />
+  <label class='xFormLabel xFieldLabel' for='What_is_the_secondary_marketing_challenge_you_are_trying_to_solve__3'>Retain and build loyalty</label>
+</div>
+	</div>
+
+</div>
+</div>
+  <div class='xHelpContainer'><div role='alert' class='xErrorLabel'></div></div>
+</div>
+			<!-- EOF: Page Control Loop //-->
+
+	</fieldset>
+</div><div class="xFormPage odd n3 ">
+	<fieldset>
+
+		
+
+		
+			<div id='Which_category_of_tools_are_you_evaluating_Wrapper' data-ngx-id='Which_category_of_tools_are_you_evaluating_' data-ngx-control-required-msg='Select an option.' data-parsley-error-container='#Which_category_of_tools_are_you_evaluating_Wrapper .xErrorLabel' data-ngx-control-error-msg='Field not valid, please check.' class='xFieldItem xControlQuizcategory hasImages xRequired'><div class='xFieldItem xControlQuestion xAnswerSingle xQuestionMediacard'><div class="xFieldContainer">
+
+	<div class="xCopyContainer xQuizQuestion" data-type="single">
+		<p class="xTitle xQuestionLabel">Which category of tools are you evaluating? 
+</p>
+	</div>
+
+	
+
+	<div class="xAnswerContainer">
+		<div class='xField xFieldRadioChoice hasImage'>
+  <div class='xMediaContainer xTypeImage'><img width="145" height="145"  src="https://a.wayin.com/images/7449/76e3ce9a-09eb-49e0-b992-70b411ecccd6/Q3_-_A__3.png" alt="" ></div>
+  <input type='radio' title='Which category of tools are you evaluating? 
+' class='radioField' name='Which_category_of_tools_are_you_evaluating_' id='Which_category_of_tools_are_you_evaluating__0' value='Data acquisition tools' autocomplete='off' required='' data-parsley-trigger='change focusout' data-parsley-validation-minlength='0' data-parsley-error-container='#Which_category_of_tools_are_you_evaluating_Wrapper .xErrorLabel' data-parsley-required='true' data-parsley-required-message='Select an option.' data-parsley-type-text-message='Field not valid, please check.' />
+  <label class='xFormLabel xFieldLabel' for='Which_category_of_tools_are_you_evaluating__0'>Data acquisition tools</label>
+</div>
+<div class='xField xFieldRadioChoice hasImage'>
+  <div class='xMediaContainer xTypeImage'><img width="145" height="145"  src="https://a.wayin.com/images/7449/76e3ce9a-09eb-49e0-b992-70b411ecccd6/Q3_-_B__3.png" alt="" ></div>
+  <input type='radio' title='Which category of tools are you evaluating? 
+' class='radioField' name='Which_category_of_tools_are_you_evaluating_' id='Which_category_of_tools_are_you_evaluating__1' value='Omnichannel messaging tools' autocomplete='off' required='' data-parsley-trigger='change focusout' data-parsley-validation-minlength='0' data-parsley-error-container='#Which_category_of_tools_are_you_evaluating_Wrapper .xErrorLabel' data-parsley-required='true' data-parsley-required-message='Select an option.' data-parsley-type-text-message='Field not valid, please check.' />
+  <label class='xFormLabel xFieldLabel' for='Which_category_of_tools_are_you_evaluating__1'>Omnichannel messaging tools</label>
+</div>
+<div class='xField xFieldRadioChoice hasImage'>
+  <div class='xMediaContainer xTypeImage'><img width="145" height="145"  src="https://a.wayin.com/images/7449/76e3ce9a-09eb-49e0-b992-70b411ecccd6/Q3_-_C__3.png" alt="" ></div>
+  <input type='radio' title='Which category of tools are you evaluating? 
+' class='radioField' name='Which_category_of_tools_are_you_evaluating_' id='Which_category_of_tools_are_you_evaluating__2' value='Data storage and management tools' autocomplete='off' required='' data-parsley-trigger='change focusout' data-parsley-validation-minlength='0' data-parsley-error-container='#Which_category_of_tools_are_you_evaluating_Wrapper .xErrorLabel' data-parsley-required='true' data-parsley-required-message='Select an option.' data-parsley-type-text-message='Field not valid, please check.' />
+  <label class='xFormLabel xFieldLabel' for='Which_category_of_tools_are_you_evaluating__2'>Data storage and management tools</label>
+</div>
+<div class='xField xFieldRadioChoice hasImage'>
+  <div class='xMediaContainer xTypeImage'><img width="145" height="145"  src="https://a.wayin.com/images/7449/76e3ce9a-09eb-49e0-b992-70b411ecccd6/Q3_-_D__3.png" alt="" ></div>
+  <input type='radio' title='Which category of tools are you evaluating? 
+' class='radioField' name='Which_category_of_tools_are_you_evaluating_' id='Which_category_of_tools_are_you_evaluating__3' value='Loyalty and retention tools' autocomplete='off' required='' data-parsley-trigger='change focusout' data-parsley-validation-minlength='0' data-parsley-error-container='#Which_category_of_tools_are_you_evaluating_Wrapper .xErrorLabel' data-parsley-required='true' data-parsley-required-message='Select an option.' data-parsley-type-text-message='Field not valid, please check.' />
+  <label class='xFormLabel xFieldLabel' for='Which_category_of_tools_are_you_evaluating__3'>Loyalty and retention tools</label>
+</div>
+	</div>
+
+</div>
+</div>
+  <div class='xHelpContainer'><div role='alert' class='xErrorLabel'></div></div>
+</div>
+			<!-- EOF: Page Control Loop //-->
+
+	</fieldset>
+</div><div class="xFormPage even n4 ">
+	<fieldset>
+
+		
+
+		
+			<div id='Are_you_looking_for_services_to_supplement_these_tools_and_support_your_business_Wrapper' data-ngx-id='Are_you_looking_for_services_to_supplement_these_tools_and_support_your_business_' data-ngx-control-error-msg='Field not valid, please check.' data-parsley-error-container='#Are_you_looking_for_services_to_supplement_these_tools_and_support_your_business_Wrapper .xErrorLabel' class='xFieldItem xControlQuizcategory hasImages'><div class='xFieldItem xControlQuestion xAnswerSingle xQuestionMediacard'><div class="xFieldContainer">
+
+	<div class="xCopyContainer xQuizQuestion" data-type="single">
+		<p class="xTitle xQuestionLabel">Are you looking for services to supplement these tools and support your business? 
+</p>
+	</div>
+
+	
+
+	<div class="xAnswerContainer">
+		<div class='xField xFieldRadioChoice hasImage'>
+  <div class='xMediaContainer xTypeImage'><img width="145" height="145"  src="https://a.wayin.com/images/7449/76e3ce9a-09eb-49e0-b992-70b411ecccd6/Q4_-_A__3.png" alt="" ></div>
+  <input type='radio' title='Are you looking for services to supplement these tools and support your business? 
+' class='radioField' name='Are_you_looking_for_services_to_supplement_these_tools_and_support_your_business_' id='Are_you_looking_for_services_to_supplement_these_tools_and_support_your_business__0' value='Technical services' autocomplete='off' data-parsley-trigger='change focusout' data-parsley-validation-minlength='0' data-parsley-error-container='#Are_you_looking_for_services_to_supplement_these_tools_and_support_your_business_Wrapper .xErrorLabel' data-parsley-required-message='Select an option.' data-parsley-type-text-message='Field not valid, please check.' />
+  <label class='xFormLabel xFieldLabel' for='Are_you_looking_for_services_to_supplement_these_tools_and_support_your_business__0'>Technical services</label>
+</div>
+<div class='xField xFieldRadioChoice hasImage'>
+  <div class='xMediaContainer xTypeImage'><img width="145" height="145"  src="https://a.wayin.com/images/7449/76e3ce9a-09eb-49e0-b992-70b411ecccd6/Q4_-_B__3.png" alt="" ></div>
+  <input type='radio' title='Are you looking for services to supplement these tools and support your business? 
+' class='radioField' name='Are_you_looking_for_services_to_supplement_these_tools_and_support_your_business_' id='Are_you_looking_for_services_to_supplement_these_tools_and_support_your_business__1' value='Campaign services' autocomplete='off' data-parsley-trigger='change focusout' data-parsley-validation-minlength='0' data-parsley-error-container='#Are_you_looking_for_services_to_supplement_these_tools_and_support_your_business_Wrapper .xErrorLabel' data-parsley-required-message='Select an option.' data-parsley-type-text-message='Field not valid, please check.' />
+  <label class='xFormLabel xFieldLabel' for='Are_you_looking_for_services_to_supplement_these_tools_and_support_your_business__1'>Campaign services</label>
+</div>
+<div class='xField xFieldRadioChoice hasImage'>
+  <div class='xMediaContainer xTypeImage'><img width="145" height="145"  src="https://a.wayin.com/images/7449/76e3ce9a-09eb-49e0-b992-70b411ecccd6/Q4_-_C__3.png" alt="" ></div>
+  <input type='radio' title='Are you looking for services to supplement these tools and support your business? 
+' class='radioField' name='Are_you_looking_for_services_to_supplement_these_tools_and_support_your_business_' id='Are_you_looking_for_services_to_supplement_these_tools_and_support_your_business__2' value='Strategic services' autocomplete='off' data-parsley-trigger='change focusout' data-parsley-validation-minlength='0' data-parsley-error-container='#Are_you_looking_for_services_to_supplement_these_tools_and_support_your_business_Wrapper .xErrorLabel' data-parsley-required-message='Select an option.' data-parsley-type-text-message='Field not valid, please check.' />
+  <label class='xFormLabel xFieldLabel' for='Are_you_looking_for_services_to_supplement_these_tools_and_support_your_business__2'>Strategic services</label>
+</div>
+<div class='xField xFieldRadioChoice hasImage'>
+  <div class='xMediaContainer xTypeImage'><img width="145" height="145"  src="https://a.wayin.com/images/7449/76e3ce9a-09eb-49e0-b992-70b411ecccd6/Q4_-_D__3.png" alt="" ></div>
+  <input type='radio' title='Are you looking for services to supplement these tools and support your business? 
+' class='radioField' name='Are_you_looking_for_services_to_supplement_these_tools_and_support_your_business_' id='Are_you_looking_for_services_to_supplement_these_tools_and_support_your_business__3' value='Creative services' autocomplete='off' data-parsley-trigger='change focusout' data-parsley-validation-minlength='0' data-parsley-error-container='#Are_you_looking_for_services_to_supplement_these_tools_and_support_your_business_Wrapper .xErrorLabel' data-parsley-required-message='Select an option.' data-parsley-type-text-message='Field not valid, please check.' />
+  <label class='xFormLabel xFieldLabel' for='Are_you_looking_for_services_to_supplement_these_tools_and_support_your_business__3'>Creative services</label>
+</div>
+	</div>
+
+</div>
+</div>
+  <div class='xHelpContainer'><div role='alert' class='xErrorLabel'></div></div>
+</div>
+			<!-- EOF: Page Control Loop //-->
+
+	</fieldset>
+</div><div class="xFormPage odd n5 ">
+	<fieldset>
+
+		
+
+		
+			<div id='How_soon_are_you_looking_to_put_a_solution_in_place_Wrapper' data-ngx-id='How_soon_are_you_looking_to_put_a_solution_in_place_' data-ngx-control-error-msg='Field not valid, please check.' data-parsley-error-container='#How_soon_are_you_looking_to_put_a_solution_in_place_Wrapper .xErrorLabel' class='xFieldItem xControlQuizcategory hasImages'><div class='xFieldItem xControlQuestion xAnswerSingle xQuestionMediacard'><div class="xFieldContainer">
+
+	<div class="xCopyContainer xQuizQuestion" data-type="single">
+		<p class="xTitle xQuestionLabel">How soon are you looking to put a solution in place? 
+</p>
+	</div>
+
+	
+
+	<div class="xAnswerContainer">
+		<div class='xField xFieldRadioChoice hasImage'>
+  <div class='xMediaContainer xTypeImage'><img width="145" height="145"  src="https://a.wayin.com/images/7449/76e3ce9a-09eb-49e0-b992-70b411ecccd6/Q5_-_A__3.png" alt="" ></div>
+  <input type='radio' title='How soon are you looking to put a solution in place? 
+' class='radioField' name='How_soon_are_you_looking_to_put_a_solution_in_place_' id='How_soon_are_you_looking_to_put_a_solution_in_place__0' value='1-3 months' autocomplete='off' data-parsley-trigger='change focusout' data-parsley-validation-minlength='0' data-parsley-error-container='#How_soon_are_you_looking_to_put_a_solution_in_place_Wrapper .xErrorLabel' data-parsley-required-message='Select an option.' data-parsley-type-text-message='Field not valid, please check.' />
+  <label class='xFormLabel xFieldLabel' for='How_soon_are_you_looking_to_put_a_solution_in_place__0'>1-3 months</label>
+</div>
+<div class='xField xFieldRadioChoice hasImage'>
+  <div class='xMediaContainer xTypeImage'><img width="145" height="145"  src="https://a.wayin.com/images/7449/76e3ce9a-09eb-49e0-b992-70b411ecccd6/Q5_-_B__3.png" alt="" ></div>
+  <input type='radio' title='How soon are you looking to put a solution in place? 
+' class='radioField' name='How_soon_are_you_looking_to_put_a_solution_in_place_' id='How_soon_are_you_looking_to_put_a_solution_in_place__1' value='3-6 months' autocomplete='off' data-parsley-trigger='change focusout' data-parsley-validation-minlength='0' data-parsley-error-container='#How_soon_are_you_looking_to_put_a_solution_in_place_Wrapper .xErrorLabel' data-parsley-required-message='Select an option.' data-parsley-type-text-message='Field not valid, please check.' />
+  <label class='xFormLabel xFieldLabel' for='How_soon_are_you_looking_to_put_a_solution_in_place__1'>3-6 months</label>
+</div>
+<div class='xField xFieldRadioChoice hasImage'>
+  <div class='xMediaContainer xTypeImage'><img width="145" height="145"  src="https://a.wayin.com/images/7449/76e3ce9a-09eb-49e0-b992-70b411ecccd6/Q5_-_C__3.png" alt="" ></div>
+  <input type='radio' title='How soon are you looking to put a solution in place? 
+' class='radioField' name='How_soon_are_you_looking_to_put_a_solution_in_place_' id='How_soon_are_you_looking_to_put_a_solution_in_place__2' value='Around 12 months' autocomplete='off' data-parsley-trigger='change focusout' data-parsley-validation-minlength='0' data-parsley-error-container='#How_soon_are_you_looking_to_put_a_solution_in_place_Wrapper .xErrorLabel' data-parsley-required-message='Select an option.' data-parsley-type-text-message='Field not valid, please check.' />
+  <label class='xFormLabel xFieldLabel' for='How_soon_are_you_looking_to_put_a_solution_in_place__2'>Around 12 months</label>
+</div>
+<div class='xField xFieldRadioChoice hasImage'>
+  <div class='xMediaContainer xTypeImage'><img width="145" height="145"  src="https://a.wayin.com/images/7449/76e3ce9a-09eb-49e0-b992-70b411ecccd6/Q5_-_D__3.png" alt="" ></div>
+  <input type='radio' title='How soon are you looking to put a solution in place? 
+' class='radioField' name='How_soon_are_you_looking_to_put_a_solution_in_place_' id='How_soon_are_you_looking_to_put_a_solution_in_place__3' value='Not actively planning right now' autocomplete='off' data-parsley-trigger='change focusout' data-parsley-validation-minlength='0' data-parsley-error-container='#How_soon_are_you_looking_to_put_a_solution_in_place_Wrapper .xErrorLabel' data-parsley-required-message='Select an option.' data-parsley-type-text-message='Field not valid, please check.' />
+  <label class='xFormLabel xFieldLabel' for='How_soon_are_you_looking_to_put_a_solution_in_place__3'>Not actively planning right now</label>
+</div>
+	</div>
+
+</div>
+</div>
+  <div class='xHelpContainer'><div role='alert' class='xErrorLabel'></div></div>
+</div>
+			<!-- EOF: Page Control Loop //-->
+
+	</fieldset>
+</div><div class="xFormPage last even n6 ">
+	<fieldset>
+
+		
+
+		
+			<div id='infoWrapper' data-ngx-id='info' data-ngx-control-error-msg='Invalid error' data-parsley-error-container='#infoWrapper .xErrorLabel' class='xFieldItem xControlInfo xProfileInfo'><div class='xLabelContainer'>
+  <label class='xFormLabel xControlLabel' for='info'></label>
+</div>
+  <div class='xFieldContainer xFieldWidthMedium'>
+    <div class='xField'><p class='info xCopy'>Almost done! Please fill out your details</p></div>
+    <div class='xHelpContainer'><div role='alert' class='xErrorLabel'></div></div>
+  </div>
+</div>
+		
+			<div id='nameWrapper' data-ngx-id='name' data-ngx-control='name' data-ngx-control-required-msg='Enter your name.' data-parsley-error-container='#nameWrapper .xErrorLabel' data-ngx-control-error-msg='Please enter your name, no special characters are permitted.' class='xFieldItem xControlName xProfileName xFormatNameNoTitle xComposite xRequired'><div class='xLabelContainer'>
+  <label class='xFormLabel xControlLabel' for='name'>Name</label>
+</div>
+  <div class='xFieldContainer xFieldWidthExtralarge'>
+
+	<div class="xField xCompositeItem-FirstName">
+		<input type='text' title='First name' name='name_Firstname' id='name_Firstname' aria-label='First name' data-parsley-trigger='focusout' data-ngx-subfield-error-key='FirstName' data-parsley-error-container='#nameWrapper .xErrorLabel' maxlength='64' data-parsley-required-message='Required.' data-parsley-type-text-message='This value is invalid.' data-parsley-name='name' data-ngx-validtype='name' placeholder='First Name' required='' data-ngx-populate='firstname' class='textField' />
+		<label class="xSubLabel" for="name_Firstname">First name</label>
+	</div>
+
+	<div class="xField xCompositeItem-LastName">
+		<input type='text' title='Last name' name='name_Lastname' id='name_Lastname' aria-label='Last name' data-parsley-trigger='focusout' data-ngx-subfield-error-key='LastName' data-parsley-error-container='#nameWrapper .xErrorLabel' maxlength='128' data-parsley-required-message='Required.' data-parsley-type-text-message='This value is invalid.' data-parsley-name='name' data-ngx-validtype='name' placeholder='Last Name' required='' data-ngx-populate='lastname' class='textField' />
+		<label class="xSubLabel" for="name_Lastname">Last name</label>
+	</div>
+
+
+    <div class='xHelpContainer'><div role='alert' class='xErrorLabel'></div></div>
+  </div>
+</div>
+		
+			<div id='emailWrapper' data-ngx-id='email' data-ngx-control-required-msg='Enter your email address.' data-parsley-error-container='#emailWrapper .xErrorLabel' data-ngx-control-error-msg='Please enter a valid email address.' class='xFieldItem xControlEmail xProfileEmail xRequired'><div class='xLabelContainer'>
+  <label class='xFormLabel xControlLabel' for='email'>Business Email</label>
+</div>
+  <div class='xFieldContainer xFieldWidthExtralarge'>
+    <div class='xField'><input type='email' id='email' name='email' title='Business Email' data-ngx-populate='email' data-parsley-trigger='change focusout' data-parsley-validation-minlength='0' data-parsley-type='email' data-parsley-error-container='#emailWrapper .xFieldContainer &gt; .xField:first-child + .xHelpContainer .xErrorLabel' data-parsley-required='true' data-parsley-required-message='Enter your email address.' data-parsley-type-email-message='Please enter a valid email address.' placeholder='me@company.com' required='' class='emailField textField required' /></div>
+    <div class='xHelpContainer'><div role='alert' class='xErrorLabel'></div></div>
+  </div>
+</div>
+		
+			<div id='CompanyWrapper' data-ngx-id='Company' data-ngx-control-required-msg='Required.' data-parsley-error-container='#CompanyWrapper .xErrorLabel' data-ngx-control-error-msg='This value is invalid.' class='xFieldItem xControlText xRequired'><div class='xLabelContainer'>
+  <label class='xFormLabel xControlLabel' for='Company'>Company</label>
+</div>
+  <div class='xFieldContainer xFieldWidthMedium'>
+    <div class='xField'><input type='text' title='Company' name='Company' id='Company' data-parsley-trigger='change focusout' data-parsley-validation-minlength='0' data-parsley-error-container='#CompanyWrapper .xErrorLabel' data-parsley-required='true' data-parsley-required-message='Required.' data-parsley-type-text-message='This value is invalid.' required='' class='textField required' /></div>
+    <div class='xHelpContainer'><div role='alert' class='xErrorLabel'></div></div>
+  </div>
+</div>
+		
+			<div id='TitleWrapper' data-ngx-id='Title' data-ngx-control-required-msg='Required.' data-parsley-error-container='#TitleWrapper .xErrorLabel' data-ngx-control-error-msg='This value is invalid.' class='xFieldItem xControlText xRequired'><div class='xLabelContainer'>
+  <label class='xFormLabel xControlLabel' for='Title'>Job Title</label>
+</div>
+  <div class='xFieldContainer xFieldWidthMedium'>
+    <div class='xField'><input type='text' title='Job Title' name='Title' id='Title' data-parsley-trigger='change focusout' data-parsley-validation-minlength='0' data-parsley-error-container='#TitleWrapper .xErrorLabel' data-parsley-required='true' data-parsley-required-message='Required.' data-parsley-type-text-message='This value is invalid.' required='' class='textField required' /></div>
+    <div class='xHelpContainer'><div role='alert' class='xErrorLabel'></div></div>
+  </div>
+</div>
+		
+			<div id='CountryWrapper' data-ngx-id='Country' data-ngx-control-required-msg='Select an option.' data-parsley-error-container='#CountryWrapper .xErrorLabel' data-ngx-control-error-msg='Invalid error' class='xFieldItem xControlSelect xRequired'><div class='xLabelContainer'>
+  <label class='xFormLabel xControlLabel' for='Country'>Select a Choice</label>
+</div>
+  <div class='xFieldContainer xFieldWidthMedium'>
+    <div class='xField'><select name='Country' id='Country' title='Select a Choice' required='' data-parsley-trigger='change focusout' data-parsley-validation-minlength='0' data-parsley-error-container='#CountryWrapper .xErrorLabel' data-parsley-required='true' data-parsley-required-message='Select an option.' data-parsley-type-text-message='Invalid error' class=''>
+  <option title='United Kingdom' value='United Kingdom' selected='selected'>United Kingdom</option>
+  <option title='France' value='France'>France</option>
+  <option title='Spain' value='Spain'>Spain</option>
+  <option title='United States' value='United States'>United States</option>
+  <option title='Australia' value='Australia'>Australia</option>
+  <option title='Mexico' value='Mexico'>Mexico</option>
+  <option title='New Zealand' value='New Zealand'>New Zealand</option>
+  <option title='Afghanistan' value='Afghanistan'>Afghanistan</option>
+  <option title='Albania' value='Albania'>Albania</option>
+  <option title='Algeria' value='Algeria'>Algeria</option>
+  <option title='American Samoa' value='American Samoa'>American Samoa</option>
+  <option title='Andorra' value='Andorra'>Andorra</option>
+  <option title='Angola' value='Angola'>Angola</option>
+  <option title='Anguilla' value='Anguilla'>Anguilla</option>
+  <option title='Antarctica' value='Antarctica'>Antarctica</option>
+  <option title='Antigua and Barbuda' value='Antigua and Barbuda'>Antigua and Barbuda</option>
+  <option title='Argentina' value='Argentina'>Argentina</option>
+  <option title='Armenia' value='Armenia'>Armenia</option>
+  <option title='Aruba' value='Aruba'>Aruba</option>
+  <option title='Austria' value='Austria'>Austria</option>
+  <option title='Azerbaijan' value='Azerbaijan'>Azerbaijan</option>
+  <option title='Bahamas' value='Bahamas'>Bahamas</option>
+  <option title='Bahrain' value='Bahrain'>Bahrain</option>
+  <option title='Bangladesh' value='Bangladesh'>Bangladesh</option>
+  <option title='Barbados' value='Barbados'>Barbados</option>
+  <option title='Belarus' value='Belarus'>Belarus</option>
+  <option title='Belgium' value='Belgium'>Belgium</option>
+  <option title='Belize' value='Belize'>Belize</option>
+  <option title='Benin' value='Benin'>Benin</option>
+  <option title='Bermuda' value='Bermuda'>Bermuda</option>
+  <option title='Bhutan' value='Bhutan'>Bhutan</option>
+  <option title='Bolivia' value='Bolivia'>Bolivia</option>
+  <option title='Bosnia and Herzegowina' value='Bosnia and Herzegowina'>Bosnia and Herzegowina</option>
+  <option title='Botswana' value='Botswana'>Botswana</option>
+  <option title='Bouvet Island' value='Bouvet Island'>Bouvet Island</option>
+  <option title='Brazil' value='Brazil'>Brazil</option>
+  <option title='British Indian Ocean Territory' value='British Indian Ocean Territory'>British Indian Ocean Territory</option>
+  <option title='Brunei Darussalam' value='Brunei Darussalam'>Brunei Darussalam</option>
+  <option title='Bulgaria' value='Bulgaria'>Bulgaria</option>
+  <option title='Burkina Faso' value='Burkina Faso'>Burkina Faso</option>
+  <option title='Burundi' value='Burundi'>Burundi</option>
+  <option title='Cambodia' value='Cambodia'>Cambodia</option>
+  <option title='Cameroon' value='Cameroon'>Cameroon</option>
+  <option title='Canada' value='Canada'>Canada</option>
+  <option title='Cape Verde' value='Cape Verde'>Cape Verde</option>
+  <option title='Cayman Islands' value='Cayman Islands'>Cayman Islands</option>
+  <option title='Central African Republic' value='Central African Republic'>Central African Republic</option>
+  <option title='Chad' value='Chad'>Chad</option>
+  <option title='Chile' value='Chile'>Chile</option>
+  <option title='China' value='China'>China</option>
+  <option title='Christmas Island' value='Christmas Island'>Christmas Island</option>
+  <option title='Cocos Islands' value='Cocos Islands'>Cocos Islands</option>
+  <option title='Colombia' value='Colombia'>Colombia</option>
+  <option title='Comoros' value='Comoros'>Comoros</option>
+  <option title='Congo' value='Congo'>Congo</option>
+  <option title='Cook Islands' value='Cook Islands'>Cook Islands</option>
+  <option title='Costa Rica' value='Costa Rica'>Costa Rica</option>
+  <option title='Cota D&apos;Ivoire' value='Cota D&apos;Ivoire'>Cota D'Ivoire</option>
+  <option title='Croatia' value='Croatia'>Croatia</option>
+  <option title='Cuba' value='Cuba'>Cuba</option>
+  <option title='Cyprus' value='Cyprus'>Cyprus</option>
+  <option title='Czech Republic' value='Czech Republic'>Czech Republic</option>
+  <option title='Democratic People&apos;s Republic of Korea' value='Democratic People&apos;s Republic of Korea'>Democratic People's Republic of Korea</option>
+  <option title='Denmark' value='Denmark'>Denmark</option>
+  <option title='Djibouti' value='Djibouti'>Djibouti</option>
+  <option title='Dominica' value='Dominica'>Dominica</option>
+  <option title='Dominican Republic' value='Dominican Republic'>Dominican Republic</option>
+  <option title='East Timor' value='East Timor'>East Timor</option>
+  <option title='Ecuador' value='Ecuador'>Ecuador</option>
+  <option title='Egypt' value='Egypt'>Egypt</option>
+  <option title='El Salvador' value='El Salvador'>El Salvador</option>
+  <option title='Equatorial Guinea' value='Equatorial Guinea'>Equatorial Guinea</option>
+  <option title='Eritrea' value='Eritrea'>Eritrea</option>
+  <option title='Estonia' value='Estonia'>Estonia</option>
+  <option title='Ethiopia' value='Ethiopia'>Ethiopia</option>
+  <option title='Falkland Islands' value='Falkland Islands'>Falkland Islands</option>
+  <option title='Faroe Islands' value='Faroe Islands'>Faroe Islands</option>
+  <option title='Fiji' value='Fiji'>Fiji</option>
+  <option title='Finland' value='Finland'>Finland</option>
+  <option title='French Guiana' value='French Guiana'>French Guiana</option>
+  <option title='French Polynesia' value='French Polynesia'>French Polynesia</option>
+  <option title='French Southern Territories' value='French Southern Territories'>French Southern Territories</option>
+  <option title='Gabon' value='Gabon'>Gabon</option>
+  <option title='Gambia' value='Gambia'>Gambia</option>
+  <option title='Georgia' value='Georgia'>Georgia</option>
+  <option title='Germany' value='Germany'>Germany</option>
+  <option title='Ghana' value='Ghana'>Ghana</option>
+  <option title='Gibraltar' value='Gibraltar'>Gibraltar</option>
+  <option title='Greece' value='Greece'>Greece</option>
+  <option title='Greenland' value='Greenland'>Greenland</option>
+  <option title='Grenada' value='Grenada'>Grenada</option>
+  <option title='Guadeloupe' value='Guadeloupe'>Guadeloupe</option>
+  <option title='Guam' value='Guam'>Guam</option>
+  <option title='Guatemala' value='Guatemala'>Guatemala</option>
+  <option title='Guinea-Bissau' value='Guinea-Bissau'>Guinea-Bissau</option>
+  <option title='Guinea' value='Guinea'>Guinea</option>
+  <option title='Guyana' value='Guyana'>Guyana</option>
+  <option title='Haiti' value='Haiti'>Haiti</option>
+  <option title='Heard and McDonald Islands' value='Heard and McDonald Islands'>Heard and McDonald Islands</option>
+  <option title='Holy See' value='Holy See'>Holy See</option>
+  <option title='Honduras' value='Honduras'>Honduras</option>
+  <option title='Hong Kong' value='Hong Kong'>Hong Kong</option>
+  <option title='Hungary' value='Hungary'>Hungary</option>
+  <option title='Iceland' value='Iceland'>Iceland</option>
+  <option title='India' value='India'>India</option>
+  <option title='Indonesia' value='Indonesia'>Indonesia</option>
+  <option title='Iran' value='Iran'>Iran</option>
+  <option title='Iraq' value='Iraq'>Iraq</option>
+  <option title='Ireland' value='Ireland'>Ireland</option>
+  <option title='Israel' value='Israel'>Israel</option>
+  <option title='Italy' value='Italy'>Italy</option>
+  <option title='Jamaica' value='Jamaica'>Jamaica</option>
+  <option title='Japan' value='Japan'>Japan</option>
+  <option title='Jordan' value='Jordan'>Jordan</option>
+  <option title='Kazakhstan' value='Kazakhstan'>Kazakhstan</option>
+  <option title='Kenya' value='Kenya'>Kenya</option>
+  <option title='Kiribati' value='Kiribati'>Kiribati</option>
+  <option title='Korea' value='Korea'>Korea</option>
+  <option title='Kuwait' value='Kuwait'>Kuwait</option>
+  <option title='Kyrgyzstan' value='Kyrgyzstan'>Kyrgyzstan</option>
+  <option title='Lao' value='Lao'>Lao</option>
+  <option title='Latvia' value='Latvia'>Latvia</option>
+  <option title='Lebanon' value='Lebanon'>Lebanon</option>
+  <option title='Lesotho' value='Lesotho'>Lesotho</option>
+  <option title='Liberia' value='Liberia'>Liberia</option>
+  <option title='Libyan Arab Jamahiriya' value='Libyan Arab Jamahiriya'>Libyan Arab Jamahiriya</option>
+  <option title='Liechtenstein' value='Liechtenstein'>Liechtenstein</option>
+  <option title='Lithuania' value='Lithuania'>Lithuania</option>
+  <option title='Luxembourg' value='Luxembourg'>Luxembourg</option>
+  <option title='Macau' value='Macau'>Macau</option>
+  <option title='Macedonia' value='Macedonia'>Macedonia</option>
+  <option title='Madagascar' value='Madagascar'>Madagascar</option>
+  <option title='Malawi' value='Malawi'>Malawi</option>
+  <option title='Malaysia' value='Malaysia'>Malaysia</option>
+  <option title='Maldives' value='Maldives'>Maldives</option>
+  <option title='Mali' value='Mali'>Mali</option>
+  <option title='Malta' value='Malta'>Malta</option>
+  <option title='Marshall Islands' value='Marshall Islands'>Marshall Islands</option>
+  <option title='Martinique' value='Martinique'>Martinique</option>
+  <option title='Mauritania' value='Mauritania'>Mauritania</option>
+  <option title='Mauritius' value='Mauritius'>Mauritius</option>
+  <option title='Mayotte' value='Mayotte'>Mayotte</option>
+  <option title='Micronesia' value='Micronesia'>Micronesia</option>
+  <option title='Moldova' value='Moldova'>Moldova</option>
+  <option title='Monaco' value='Monaco'>Monaco</option>
+  <option title='Mongolia' value='Mongolia'>Mongolia</option>
+  <option title='Montserrat' value='Montserrat'>Montserrat</option>
+  <option title='Morocco' value='Morocco'>Morocco</option>
+  <option title='Mozambique' value='Mozambique'>Mozambique</option>
+  <option title='Myanmar' value='Myanmar'>Myanmar</option>
+  <option title='Namibia' value='Namibia'>Namibia</option>
+  <option title='Nauru' value='Nauru'>Nauru</option>
+  <option title='Nepal' value='Nepal'>Nepal</option>
+  <option title='Netherlands Antilles' value='Netherlands Antilles'>Netherlands Antilles</option>
+  <option title='Netherlands' value='Netherlands'>Netherlands</option>
+  <option title='New Caledonia' value='New Caledonia'>New Caledonia</option>
+  <option title='Nicaragua' value='Nicaragua'>Nicaragua</option>
+  <option title='Niger' value='Niger'>Niger</option>
+  <option title='Nigeria' value='Nigeria'>Nigeria</option>
+  <option title='Niue' value='Niue'>Niue</option>
+  <option title='Norfolk Island' value='Norfolk Island'>Norfolk Island</option>
+  <option title='Northern Mariana Islands' value='Northern Mariana Islands'>Northern Mariana Islands</option>
+  <option title='Norway' value='Norway'>Norway</option>
+  <option title='Oman' value='Oman'>Oman</option>
+  <option title='Pakistan' value='Pakistan'>Pakistan</option>
+  <option title='Palau' value='Palau'>Palau</option>
+  <option title='Panama' value='Panama'>Panama</option>
+  <option title='Papua New Guinea' value='Papua New Guinea'>Papua New Guinea</option>
+  <option title='Paraguay' value='Paraguay'>Paraguay</option>
+  <option title='Peru' value='Peru'>Peru</option>
+  <option title='Philippines' value='Philippines'>Philippines</option>
+  <option title='Pitcairn' value='Pitcairn'>Pitcairn</option>
+  <option title='Poland' value='Poland'>Poland</option>
+  <option title='Portugal' value='Portugal'>Portugal</option>
+  <option title='Puerto Rico' value='Puerto Rico'>Puerto Rico</option>
+  <option title='Qatar' value='Qatar'>Qatar</option>
+  <option title='Reunion' value='Reunion'>Reunion</option>
+  <option title='Romania' value='Romania'>Romania</option>
+  <option title='Russia' value='Russia'>Russia</option>
+  <option title='Rwanda' value='Rwanda'>Rwanda</option>
+  <option title='Saint Kitts and Nevis' value='Saint Kitts and Nevis'>Saint Kitts and Nevis</option>
+  <option title='Saint LUCIA' value='Saint LUCIA'>Saint LUCIA</option>
+  <option title='Saint Vincent' value='Saint Vincent'>Saint Vincent</option>
+  <option title='Samoa' value='Samoa'>Samoa</option>
+  <option title='San Marino' value='San Marino'>San Marino</option>
+  <option title='Sao Tome and Principe' value='Sao Tome and Principe'>Sao Tome and Principe</option>
+  <option title='Saudi Arabia' value='Saudi Arabia'>Saudi Arabia</option>
+  <option title='Senegal' value='Senegal'>Senegal</option>
+  <option title='Seychelles' value='Seychelles'>Seychelles</option>
+  <option title='Sierra' value='Sierra'>Sierra</option>
+  <option title='Singapore' value='Singapore'>Singapore</option>
+  <option title='Slovakia' value='Slovakia'>Slovakia</option>
+  <option title='Slovenia' value='Slovenia'>Slovenia</option>
+  <option title='Solomon Islands' value='Solomon Islands'>Solomon Islands</option>
+  <option title='Somalia' value='Somalia'>Somalia</option>
+  <option title='South Africa' value='South Africa'>South Africa</option>
+  <option title='South Georgia' value='South Georgia'>South Georgia</option>
+  <option title='SriLanka' value='SriLanka'>SriLanka</option>
+  <option title='St. Helena' value='St. Helena'>St. Helena</option>
+  <option title='St. Pierre and Miguelon' value='St. Pierre and Miguelon'>St. Pierre and Miguelon</option>
+  <option title='Sudan' value='Sudan'>Sudan</option>
+  <option title='Suriname' value='Suriname'>Suriname</option>
+  <option title='Svalbard' value='Svalbard'>Svalbard</option>
+  <option title='Swaziland' value='Swaziland'>Swaziland</option>
+  <option title='Sweden' value='Sweden'>Sweden</option>
+  <option title='Switzerland' value='Switzerland'>Switzerland</option>
+  <option title='Syria' value='Syria'>Syria</option>
+  <option title='Taiwan' value='Taiwan'>Taiwan</option>
+  <option title='Tajikistan' value='Tajikistan'>Tajikistan</option>
+  <option title='Tanzania' value='Tanzania'>Tanzania</option>
+  <option title='Thailand' value='Thailand'>Thailand</option>
+  <option title='Togo' value='Togo'>Togo</option>
+  <option title='Tokelau' value='Tokelau'>Tokelau</option>
+  <option title='Tonga' value='Tonga'>Tonga</option>
+  <option title='Trinidad and Tobago' value='Trinidad and Tobago'>Trinidad and Tobago</option>
+  <option title='Tunisia' value='Tunisia'>Tunisia</option>
+  <option title='Turkey' value='Turkey'>Turkey</option>
+  <option title='Turkmenistan' value='Turkmenistan'>Turkmenistan</option>
+  <option title='Turks and Caicos' value='Turks and Caicos'>Turks and Caicos</option>
+  <option title='Tuvalu' value='Tuvalu'>Tuvalu</option>
+  <option title='Uganda' value='Uganda'>Uganda</option>
+  <option title='Ukraine' value='Ukraine'>Ukraine</option>
+  <option title='United Arab Emirates' value='United Arab Emirates'>United Arab Emirates</option>
+  <option title='Uruguay' value='Uruguay'>Uruguay</option>
+  <option title='Uzbekistan' value='Uzbekistan'>Uzbekistan</option>
+  <option title='Vanuatu' value='Vanuatu'>Vanuatu</option>
+  <option title='Venezuela' value='Venezuela'>Venezuela</option>
+  <option title='Vietnam' value='Vietnam'>Vietnam</option>
+  <option title='Virgin Islands (British)' value='Virgin Islands (British)'>Virgin Islands (British)</option>
+  <option title='Virgin Islands (U.S)' value='Virgin Islands (U.S)'>Virgin Islands (U.S)</option>
+  <option title='Wallis and Futana Islands' value='Wallis and Futana Islands'>Wallis and Futana Islands</option>
+  <option title='Western Sahara' value='Western Sahara'>Western Sahara</option>
+  <option title='Yemen' value='Yemen'>Yemen</option>
+  <option title='Yugoslavia' value='Yugoslavia'>Yugoslavia</option>
+  <option title='Zambia' value='Zambia'>Zambia</option>
+  <option title='Zimbabwe' value='Zimbabwe'>Zimbabwe</option>
+</select></div>
+    <div class='xHelpContainer'><div role='alert' class='xErrorLabel'></div></div>
+  </div>
+</div>
+		
+			<div id='brand_opt_inWrapper' data-ngx-id='brand_opt_in' data-ngx-control-error-msg='Invalid error' data-parsley-error-container='#brand_opt_inWrapper .xErrorLabel' class='xFieldItem xControlMarketing xProfileMarketingOptIn'>
+  <div style='' class='xFieldContainer'><div class='xField xFieldCheckboxChoice'>
+  <input type='checkbox' id='brand_opt_in_check' title='Would you like to subscribe to promotional and marketing communications from Cheetah Digital?' value='Would you like to subscribe to promotional and marketing communications from Cheetah Digital?' class='checkField' autocomplete='off' name='brand_opt_in' data-group='brand_opt_in_check' />
+  <label class='xFormLabel xFieldLabel' for='brand_opt_in_check'>Would you like to subscribe to promotional and marketing communications from Cheetah Digital?</label>
+</div>
+    <div class='xHelpContainer'><div role='alert' class='xErrorLabel'></div></div>
+  </div>
+</div>
+		
+			<div id='terms_and_conditionsWrapper' data-ngx-id='terms_and_conditions' data-ngx-control-required-msg='Field not valid, please check.' data-parsley-error-container='#terms_and_conditionsWrapper .xErrorLabel' data-ngx-control-error-msg='Invalid error' class='xFieldItem xControlTerms_and_conditions xRequired'>
+  <div class='xFieldContainer'><div class='xField xFieldCheckboxChoice'>
+<input
+    type="checkbox"
+    id="tsandcs_check"
+    title=""
+    class="checkField"
+    name="terms_and_conditions"
+    value="I accept the [Link:Terms and Conditions]."
+    tabindex="0"
+    data-parsley-required="true"
+    data-parsley-error-container="#terms_and_conditionsWrapper .xErrorLabel"
+    data-parsley-trigger="change"
+    data-parsley-mincheck="1"
+    required="required"
+    
+    
+    data-parsley-required-message="Field not valid, please check.">
+<label class="xFormLabel xFieldLabel xTermsAndConditionsLabel" for="tsandcs_check">I accept the <a id="" href="https://www.cheetahdigital.com/notices/shoptalk2022/"  rel="" class="" target="_blank" role="button">Terms and Conditions</a>.</label>
+</div>
+    <div class='xHelpContainer'><div role='alert' class='xErrorLabel'></div></div>
+  </div>
+</div>
+			<!-- EOF: Page Control Loop //-->
+
+	</fieldset>
+</div><input type="hidden" name="answermap" value="{&quot;ngx_token&quot;:&quot;G26G&#x2F;xDpo8p+GF5Yzf4wWA==&quot;,&quot;What_is_the_secondary_marketing_challenge_you_are_trying_to_solve_&quot;:null,&quot;How_soon_are_you_looking_to_put_a_solution_in_place_&quot;:null,&quot;ngx_secure&quot;:&quot;false&quot;,&quot;What_is_the_biggest_marketing_challenge_you_are_trying_to_solve_&quot;:null,&quot;Are_you_looking_for_services_to_supplement_these_tools_and_support_your_business_&quot;:null,&quot;Which_category_of_tools_are_you_evaluating_&quot;:null}" id="answermap" /><input type="hidden" name="answerresponsemap" value="{}" id="answerresponsemap" /></div>
+
+
+	<div class="xItem xFieldItem buttons">
+
+
+
+
+		<div class="xActionContainer xActionsForm">
+			<div class="xPaginationContainer">
+				<a class='xPagingButton xActionPaginate xActionPrevious' href='#'>
+  <span>Previous</span>
+</a>
+				<a class='xPagingButton xActionPaginate xActionNext' href='#'>
+  <span>Next</span>
+</a>
+				
+			</div>
+
+			<div class="xActivateContainer xHidden">
+			<div class="xErrorLabel">
+				<span id="xSubmitButtonError" class="custom-error-message">There are some errors that need to be corrected</span>
+			</div>
+				<button type='submit' class='xButton xCTA xSubmit'>
+  <span>Submit</span>
+</button>
+			</div>
+
+            <noscript>
+                <div class="xMetaContainer">
+                    <p class="xCopy">Entry requires Javascript to be enabled.</p>
+                </div>
+            </noscript>
+		</div>
+
+		
+	</div>
+
+
+
+
+</form></div>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+					
+				 
+			</div>
+</div>
+		 
+	</div>
+</div>
+
+
+                                    </div>
+</section>
+                                
+                            
+                        	
+                    </main>
+                
+
+				
+				
+
+				
+	
+	
+	
+	
+
+	
+
+
+
+
+			</div>
+		 
+	</div>
+	<div id="fb-root"></div>
+
+	
+
+	
+
+	
+		
+	
+
+	<script src="https://s.wayin.com/d/js/lib.8cabe6ab98407c449b44.js.gz" type="text/javascript"></script>
+	<script src="https://s.wayin.com/d/js/app.52446edc85cd07caca0f.js.gz" type="text/javascript"></script>
+
+	<!--[if lt IE 10]>
+		<script type="text/javascript" src="//s.wayin.com/assets/display/polyfill/jquery.xdomainrequest.min-a945caca315782b0380c7159b544f496.js" ></script>
+	<![endif]-->
+
+	
+
+	<script>window.uniConfig = {
+        fileDefaultHtml:'No file selected',
+        fileButtonHtml:'Choose File',
+        idPrefix:'xForm',
+        radioClass:'xRadiobox',
+        checkboxClass:'xCheckbox',
+        fileClass:'xUploader',
+        textareaClass: 'xTextarea',
+        filenameClass:'xFilename',
+        fileButtonClass:'xFileAction',
+        checkedClass:'xChecked',
+        focusClass:'xFocus',
+        disabledClass:'xDisabled',
+        activeClass:'xActive',
+        hoverClass:'xHover'
+    };
+NGX.App.Events.once('app:ready',function(args){
+
+	NGX.lang.extend({
+		loading : 'Loading',
+		error   : 'Error',
+		dates : {
+			monthsFull:['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+			weekdaysFull:['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+			weekdaysShort:['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+		},
+		browser : {
+			unsupported : {
+				title:'Sorry, we do not support this browser.',
+				message:'Unfortunately, we do not support your web browser. To continue, please access this page using one of the following web browsers: Google Chrome, Firefox, Safari, Microsoft Edge, or Internet Explorer 10 or above.',
+				continue:'Continue at your own risk'
+			}
+		},
+		buttons : {
+			overlayClose : 'Close',
+            ok : 'OK',
+            'continue' : 'Continue',
+            enter : 'Submit',
+            skip : 'Skip',
+            restart : 'Restart',
+            login : 'Login',
+            loginPrefix : 'Login with',
+            claim : 'Claim',
+            shareTo : 'Open share options'
+		},
+		countdown : {
+		    timeout : 'Timeout'
+		},
+		actions : {
+			twitter : {
+				reply 	  : 'Reply',
+				retweet   : 'Retweet',
+				favourite : 'Favorite'
+			},
+			share : {
+				prefix 	  : 'Share to',
+			},
+		},
+		user : {
+			nameFormat : '{{firstname}} {{lastname}}'
+		},
+		loyalty : {
+		    level      : 'Level',
+		    score      : 'Score',
+		    points     : 'Points',
+		    badges     : 'Badges'
+		},
+		permissions : {
+		    error : {
+		        title : 'Permissions Error',
+		        message : 'Please provide the requested permissions to continue'
+		    }
+		},
+		userAuth : {
+			signIn : {
+				headline				: 'Please Sign In',
+				socialAuthPrompt		: 'Please sign in using one of the following social networks:',
+				customAuthPrompt		: 'Please sign in by clicking the button below:',
+				customAuthButton		: 'Sign In',
+				loginSuccessMessage		: 'Thank you. You were successfully signed in.',
+				loginFailureMessage		: 'Sorry, but your attempt to sign in failed. Please try again.',
+				loginRequiredMessage	: 'Authentication is required. You must login before submitting the form.',
+				authenticatingUserMessage	: 'Please wait. Authenticating user...',
+				usePublishedUrlMessage	: 'Please access this campaign via its published url to use social sign in functionality.',
+				overlayNotice			: 'Notice',
+				unsupported				: 'Sorry, this browser does not support social sign in. Please use a different browser and try again.'
+			}
+		},
+		contests: {
+			awaitingSelection : 'Finalists will be selected soon.'
+		},
+		ugc: {
+			claim : {
+				nocontent : 'We could not find any of your content.'
+			},
+
+			paging: {
+				previous: 'Previous',
+				next: 'Next',
+				more: 'Show More'
+			},
+			sorting: {
+				label: '',
+				date: {
+					date: 'Sort by Date',
+					published: 'Sort by Published',
+					created: 'Sort by Created',
+				},
+				name: 'Sort by Name',
+				votes: 'Sort by Votes',
+				random: 'Sort by Random'
+			},
+			filters: {
+				tag:{
+					label: '',
+					all: 'All',
+					placeholder: 'Enter a tag'
+				},
+				network:{
+					label: '',
+					all: 'All networks'
+				},
+				user:{
+					label: '',
+					placeholder: 'Enter a username'
+				},
+				type:{
+					label: '',
+					all: 'All content types'
+				},
+				date:{
+					label: ''
+				},
+				all: 'All',
+			},
+			noitems: 'No items to display',
+			nocollectionset: 'Error: no collection has been selected!'
+		},
+		goal: {
+			button: {
+				participate			: 'Participate',
+				alreadyParticipated	: 'Already participated'
+			},
+			summary: {
+				total 		: 'Total',
+				of 			: 'of',
+				dateEnds 	: 'ends',
+				dateEnded 	: 'ended'
+			}
+		},
+		coupon: {
+			validAfter 		: 'This coupon is valid after {0}',
+			validBefore 	: 'This coupon is valid until {0}'
+		}
+	});
+
+var returningUserForm = $('#xReturningUserForm');
+NGX.entryForm.bindAPItriggers(returningUserForm);
+returningUserForm.submit(function(e){
+	e.preventDefault();
+	NGX.entryForm.checkReturningUser();
+});
+
+
+    // Initialises EntryForm
+    NGX.entryForm.init(JSON.parse('{\"template\":\"template:campaign:form_campaign:left\",\"moduleTitle\":\"Form\",\"tooltip\":\"Entry form selected for this experience\",\"description\":\"\",\"linkText\":\"Submit\",\"featureImageAssetRef\":\"asset:image:512x512:/images/7449/32b36bec-7c4f-43e2-a884-7a26072a66f0/Basket_-_Solid.png\",\"featureImageAssetRefcontainerRefId\":\"101239\",\"moduleDescription\":\"Drag and drop an item into your bag\",\"formBasicMode\":\"off\",\"captcha\":\"none\",\"displayProgress\":\"none\",\"style\":\"std\",\"rememberMe\":\"off\",\"votingPhase\":false,\"customCSS\":\"drop\"}'));
+
+    log.debug("Form initialised",6);
+
+	NGX.lang.extend({
+		form : {
+			uploadUnsupported: "Uploading files is not supported by your device or the current browser in use.  This can sometimes be caused by browsing inside applications such as Facebook. Please try again on a desktop/laptop to avoid this issue.",
+			captcha : {
+			    failed : {
+			        title : 'Error',
+			        msg   : 'You have failed the human check!'
+			    }
+			},
+			coppa : {
+			    title : 'We cannot currently show you this experience',
+			    msg   : 'Please come back later'
+			},
+			fail : {
+			    title : 'Error',
+			    msg   : 'We could not process your entry. Please try again later.'
+			},
+			returningUser : {
+			    entered : {
+			        title: 'Error',
+			        msg: 'Thanks for coming back, but you have hit the maximum number of entries for today.'
+			    },
+			    failed : {
+			        title: 'Error',
+			        msg: 'We could not check your email address, please try again later'
+			    },
+			    invalid : {
+			        title: 'Error',
+			        msg: 'Your email address does not look correct. Please try again.'
+			    }
+			},
+      upload: {
+        video: {
+          error: 'There was an error uploading your video.',
+          retry: 'Please retry.',
+          success: 'Video successfully uploaded.',
+          pending: 'Your video is uploading.',
+          formStatus: 'Please wait, your video is uploading.'
+        }
+      }
+		}
+	});
+});
+
+NGX.App.Events.once('router:ready',function(args){
+});
+
+NGX.App.Events.once('page:ready',function(args){
+
+	NGX.context.uid = NGX.Util.getRefCookie({'c_name':'ngx'});
+	
+		NGX.Insights.init();
+	
+	NGX.Auth.enableNetworks('all');
+
+			NGX.App.Events.trigger('flow:created', NGX.uiFlow.create('xCampaignForm',{
+			    config : {
+			        plugin : {
+			        	fx:'ScrollHorz',
+			        	autoHeight:"container"
+			        }
+                    ,validate : true
+                    
+			    }
+			}));
+			
+					NGX.App.Events.on('flow:after:xCampaignForm', function(_flow, event, optionHash, outgoingSlideEl, incomingSlideEl, forwardFlag) {
+						var $active   = $(incomingSlideEl,_flow.$el);
+						if($active.hasClass('last')){
+							$('.xActivateContainer','#xCampaignForm').removeClass('xHidden');
+						} else {
+							$('.xActivateContainer','#xCampaignForm').addClass('xHidden');
+						}
+
+                        NGX.App.api.elementIntoView($('#xCampaignForm'));
+                        NGX.App.api.resizeParent();
+
+					});
+			
+		NGX.Insights.track("view:campaign", {"c":260577,"medium":"direct","source":"web","channel":"website"});});
+
+NGX.App.Events.once('fb:ready',function(args){
+});
+
+NGX.App.Events.once('twitter:ready',function(args){
+});
+
+NGX.App.Events.once('overlay:ready',function(args){
+});
+
+NGX.App.Events.once('promo:ready',function(args){
+});
+
+NGX.App.Events.once('form:ready',function(args){
+});
+</script>
+
+	
+				   
+				
+	
+				   
+				
+	<!-- Address validation -->
+<script type="text/javascript" src="//asset.engagesciences.com/client/fairfaxnz/addressvalidation/js/min/address-val-min.js"></script>
+<!-- Production -->
+<script src="//asset.engagesciences.com/client/fairfaxnz/farmers/js/lib/jquery-ui.min.js"></script>
+<script src="//asset.engagesciences.com/client/fairfaxnz/farmers/js/lib/jquery.ui.touch-punch.min.js"></script>
+<!-- <script src="//localhost:3333/draggable-comp-sack.js"></script> //-->
+<script>
+(function() {
+  function touchHandler(e) {
+    var touches = e.changedTouches;
+    var first = touches[0];
+    var type = "";
+
+    switch(e.type) {
+      case "touchstart":
+        type = "mousedown";
+        break;
+      case "touchmove":
+        type="mousemove";
+        break;        
+      case "touchend":
+        type="mouseup";
+        break;
+      default:
+        return;
+    }
+      
+    var simulatedEvent = document.createEvent("MouseEvent");
+    simulatedEvent.initMouseEvent(type, true, true, window, 1, first.screenX, first.screenY, first.clientX, first.clientY, false, false, false, false, 0, null);
+
+    first.target.dispatchEvent(simulatedEvent);
+    e.preventDefault();
+  }
+
+  function init() {
+    document.addEventListener("touchstart", touchHandler, true);
+    document.addEventListener("touchmove", touchHandler, true);
+    document.addEventListener("touchend", touchHandler, true);
+    document.addEventListener("touchcancel", touchHandler, true); 
+	
+  }
+
+  init();
+})();
+/*globals NGX */
+//  @TODO: please comment - Chris
+var DraggableComp = {
+	timeout: 200,
+	timer: {},
+	droppedItems : [],
+	$drop: $('.xCustom-drop .xMediaImage'),
+	$drag: $('.xFieldRadioChoice'),
+	quiz: function () {
+		'use strict';
+
+		var $img = $('img',DraggableComp.$drop);
+		var imgPath = $img.attr('src');
+
+		function updateImageUrl(){
+			var pathParts = imgPath.split('/');
+			var fileName = pathParts.pop();
+			var fileNameParts = fileName.split('.');
+			var imgNum = Math.max(1,DraggableComp.droppedItems.length);
+
+			pathParts.push( fileNameParts[0].substring(0,fileNameParts[0].length-1)+imgNum+"."+fileNameParts[1] );
+			//$('img',DraggableComp.$drop).attr('src', pathParts.join('/'));
+		}
+
+		DraggableComp.$drop
+			.droppable({
+				drop: function (e, ui) {
+					var droppedID = ui.helper.find('input').attr('id'),
+						$input = $('#' + droppedID);
+					$(this).removeClass('dropping');
+					$(this).addClass('closed');
+					console.log(droppedID);
+				  	console.log($(this).removeClass('dropping'));
+					DraggableComp.droppedItems.push(droppedID);
+
+				  	$(".xCustomModule-drop").attr("data-number-items", DraggableComp.droppedItems.length)
+				  
+					$input
+						.parents('.xAnswerContainer')
+						.find('.xFieldRadioChoice')
+						.removeClass('selected');
+					ui.draggable.addClass('selected');
+					ui.draggable
+						.parents('.xAnswerContainer')
+						.find('.xRadiobox span')
+						.removeClass('xChecked');
+					ui.draggable
+						.find('input')
+						.prop('checked', true)
+						.parent('span')
+						.addClass('xChecked');
+
+					//  Any particular reason for a 2 second timeout? - Chris
+					DraggableComp.timer = setTimeout(function () {
+						$('.xActionNext').click();
+						updateImageUrl();
+					}, DraggableComp.timeout);
+				},
+				over: function () {
+					$(this).addClass('dropping');
+				},
+				out: function () {
+					$(this).removeClass('dropping');
+					$(this).removeClass('closed');
+				}
+			});
+		DraggableComp.$drag
+			.draggable({
+				helper: function () {
+					return $(this)
+						.clone()
+						.insertAfter(this)
+						.css({
+							'zIndex': 999
+						});
+				},
+				containment: 'document',
+				iframeFix: true,
+				start: function () {
+					$('.xFieldRadioChoice').removeClass('current');
+					$(this).addClass('current');
+					$('.xCustom-suitcase .xMediaImage').removeClass('closed');
+					clearTimeout(DraggableComp.timer);
+				}
+			});
+		NGX.App.Events.on('flow:next', function () {
+			DraggableComp.$drop.removeClass('closed');
+		});
+
+		NGX.on('navigate:prev:xCampaignForm',function(){
+			DraggableComp.droppedItems.pop();
+			updateImageUrl();
+		});
+	}
+};
+
+</script>
+
+<script>
+  NGX.App.Events.on('page:ready', function () {
+    DraggableComp.quiz();
+  });
+  
+  NGX.App.Events.on('state:confirmation', function () {
+    $('body').append('<img src="//fairfax.demdex.net/event?d_sid=2324487" width="0" height="0" />');
+  });
+</script>
+
+</body>
+</html>
+<!--dobj generated at Fri Jun 03 18:03:06 GMT 2022, containerid 0f91a980-aec3-4bc1-ac4f-335b1e82f639, last modified date 2022-06-03 15:25:55.0--> 
