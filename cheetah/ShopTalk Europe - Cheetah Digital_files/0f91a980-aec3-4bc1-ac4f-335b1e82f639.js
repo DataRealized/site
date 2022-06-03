@@ -1,0 +1,1 @@
+document.write('<scri'+'pt type="text/javascript" src="https://s.wayin.com/ui/ngx.embed.min.js"></scr'+'ipt>');document.write('<iframe src="https://xd.wayin.com/display/container/dc/0f91a980-aec3-4bc1-ac4f-335b1e82f639" frameborder="0" scrolling="no" width="100%" height="250" id="ngxFrame0f91a980-aec3-4bc1-ac4f-335b1e82f639"  allowTransparency="true"></iframe>');
