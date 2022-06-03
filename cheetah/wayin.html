@@ -1378,8 +1378,12 @@ NGX.App.Events.once('page:ready',function(args){
 							$('.xActivateContainer','#xCampaignForm').addClass('xHidden');
 						}
 
-                        NGX.App.api.elementIntoView($('#xCampaignForm'));
-                        NGX.App.api.resizeParent();
+						if ($active.hasClass('disabletouch')) {
+							disableTouchHandler()
+						}
+
+            NGX.App.api.elementIntoView($('#xCampaignForm'));
+            NGX.App.api.resizeParent();
 
 					});
 			
