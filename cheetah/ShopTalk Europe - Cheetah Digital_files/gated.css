@@ -1,9 +1,0 @@
-div[class*='category-gated'] > .elementor-section section.wp-block-uagb-columns .uagb-columns__columns-2 > .uagb-column__wrap:nth-of-type(2) .uagb-column__inner-wrap,
-article[class*='category-gated'] section.wp-block-uagb-columns .uagb-columns__columns-2 > .uagb-column__wrap:nth-of-type(2) .uagb-column__inner-wrap {
-  background: #fff;
-  border-radius: 30px; }
-
-div[class*='category-gated'] > .elementor-section section.wp-block-uagb-columns section.wp-block-uagb-columns .uagb-columns__columns-2 .uagb-column__wrap:nth-of-type(2) .uagb-column__inner-wrap,
-article[class*='category-gated'] section.wp-block-uagb-columns section.wp-block-uagb-columns .uagb-columns__columns-2 .uagb-column__wrap:nth-of-type(2) .uagb-column__inner-wrap {
-  background: transparent;
-  border-radius: 0px; }
